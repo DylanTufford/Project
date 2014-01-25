@@ -15,7 +15,8 @@
 			},
 			"specials":[
 				{"category":"Beer", "weekday":"Sunday", "beverage":"Creemore Springs", "price":24.95, "volume":80, "time":"All Day"},
-				
+				{"category":"Beer", "weekday":"Sunday", "beverage":"Guiness", "price":4.75, "volume":12, "time":"All Day"},
+				{"category":"Cocktail", "weekday":"Sunday", "beverage":"Caesars", "price":4.85, "volume":1, "time":"All Day"},
 			]
 		}
 	]

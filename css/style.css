@@ -11,6 +11,15 @@ a{
 	background-color: #CCCCCC;
 	margin-top: 0;
 }
+#header a, img{
+	float:left;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+#header img{
+	height: 16px;
+	width: 16px;
+}
 #list { 
 	font-size:15px; 
 }

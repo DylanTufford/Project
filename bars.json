@@ -1,0 +1,22 @@
+{
+	"bars":[
+		{
+			"name":"Maxwell's Plum",
+			"address":"1600 Grafton St",
+			"phoneNumber":"(902) 423-5090",
+			"hours":{
+				"m":"11:00am - 1:00am",
+				"tu":"11:00am - 1:00am",
+				"w":"11:00am - 1:00am",
+				"th":"11:00am - 1:00am",
+				"f":"11:00am - 1:00am",
+				"sa":"11:00am - 1:00am",
+				"su":"11:00am - 1:00am"
+			},
+			"specials":[
+				{"category":"Beer", "weekday":"Sunday", "beverage":"Creemore Springs", "price":24.95, "volume":80, "time":"All Day"},
+				
+			]
+		}
+	]
+}

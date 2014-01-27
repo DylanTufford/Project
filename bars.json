@@ -20,7 +20,7 @@
 				{"category":"Beer", "weekday":"Sunday", "beverage":"All PEI Brewing", "price":11.75, "volume":32, "time":"All Day"},
 				{"category":"Beer", "weekday":"Sunday", "beverage":"All PEI Brewing", "price":16.95, "volume":48, "time":"All Day"},
 				{"category":"Beer", "weekday":"Sunday", "beverage":"All PEI Brewing", "price":19.95, "volume":60, "time":"All Day"},
-				{"category":"Beer", "weekday":"Monday", "beverage":"Rickard's Red", "price":24.95, "volume":80, "time":"All Day"},
+				{"category":"Beer", "weekday":"Monday", "beverage":"Rickard's Red", "price":24.95, "volume":80, "time":"All Day"}
 			]
 		},
 		{
@@ -88,6 +88,6 @@
 				{"category":"Martini", "weekday":"Saturday", "beverage":"Double Martinis", "price":6.00, "volume":2, "time":"4:00pm - 2:00am"},
 				{"category":"Beer", "weekday":"Sunday", "beverage":"Steiners", "price":6.50, "volume":36, "time":"All Day"}
 			]
-		},
+		}
 	]
 }

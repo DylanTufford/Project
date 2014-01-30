@@ -39,10 +39,10 @@ a{
 	padding-left: 5px;
   	border-top: 1px solid black;
  }
-#firstElement{ 
+ul:first-child{ 
 	margin-top: 50px;
  }
- #lastElement{ 
+ul:last-child{ 
 	margin-bottom: 25px;
  }
  #list ul li strong{ 

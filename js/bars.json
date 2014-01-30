@@ -1,7 +1,7 @@
 {
 	"bars":[
 		{
-			"barName":"Maxwell's Plum",
+			"name":"Maxwell's Plum",
 			"address":"1600 Grafton St",
 			"phone":"(902) 423-5090",
 			"hours":{
@@ -24,7 +24,7 @@
 			]
 		},
 		{
-			"barName":"The Split Crow",
+			"name":"The Split Crow",
 			"address":"1855 Granville St",
 			"phone":"(902) 422-4366",
 			"hours":{
@@ -50,7 +50,7 @@
 			]
 		},
 		{
-			"barName":"Halifax Alehouse",
+			"name":"Halifax Alehouse",
 			"address":"1717 Brunswick St",
 			"phone":"(902) 423-6113",
 			"hours":{
@@ -67,7 +67,7 @@
 			]
 		},
 		{
-			"barName":"The Fickle Frog",
+			"name":"The Fickle Frog",
 			"address":"5675 Spring Garden Rd",
 			"phone":"(902) 429-9999",
 			"hours":{

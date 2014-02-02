@@ -2,26 +2,31 @@
 <html>
 	<head>
 	 	<title>tappster hfx</title>
- 		<link rel="stylesheet" type="text/css" href="css/style.css" />
- 		<script type="text/javascript" src="js/scripts.js"></script>
+ 		<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.0.css">
  		<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+ 		<script type="text/javascript" src="js/jquery.mobile-1.4.0.js"></script>
+ 		<script type="text/javascript" src="js/script.js"></script>
 	</head>
 	<body>
-		<div id="header">
-			<a href="index.html"><img src="images/back.png"/>Back</a>
-			<p id="barName">Bar Name</p>
-		</div>
-		<div class="list">
-		   <ul>
-		      <li id="firstElement"><strong>$</strong>Deal 1</li>
-		   </ul>
-		</div>
-		<div id="footer">
-			<ul>
-				<li><a href="#">Map</a></li>
-				<li><a href="#">List</a></li>
-				<li><a href="#">Settings</a></li>
-			</ul>
+		<div data-role="page">
+			<div data-role="header">
+				<a href="index.html" data-role="button" data-icon="arrow-l">Back</a>
+				<h1 id="barName"></h1>
+			</div>
+			<div data-role="content">
+			   <ul data-role="listview" class="specialsList">
+			      
+			   </ul>
+			</div>
+			<div data-role="footer">
+				<div data-role="navbar">
+			      <ul>
+			        <li><a href="#">Map</a></li>
+			        <li><a href="index.html">List</a></li>
+			        <li><a href="#">Settings</a></li>
+			      </ul>
+			    </div>
+			</div>
 		</div>
 	</body>
 </html>

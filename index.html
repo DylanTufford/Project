@@ -2,25 +2,30 @@
 <html>
 	<head>
 	 	<title>tappster hfx</title>
- 		<link rel="stylesheet" type="text/css" href="css/style.css" />
+ 		<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.0.css">
  		<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+ 		<script type="text/javascript" src="js/jquery.mobile-1.4.0.js"></script>
  		<script type="text/javascript" src="js/script.js"></script>
 	</head>
 	<body>
-		<div id="header">
-			<p>t<strong>app</strong>ster hfx</p>
-		</div>
-		<div class="list">
-		   <ul class="barList">
-		      
-		   </ul>
-		</div>
-		<div id="footer">
-			<ul>
-				<li><a href="#">Map</a></li>
-				<li><a href="#">List</a></li>
-				<li><a href="#">Settings</a></li>
-			</ul>
+		<div data-role="page">
+			<div data-role="header">
+				<h1>t<strong>app</strong>ster hfx</h1>
+			</div>
+			<div data-role="content">
+			   <ul data-role="listview" class="barList">
+			      
+			   </ul>
+			</div>
+			<div data-role="footer">
+				<div data-role="navbar">
+			      <ul>
+			        <li><a href="#">Map</a></li>
+			        <li><a href="index.html">List</a></li>
+			        <li><a href="#">Settings</a></li>
+			      </ul>
+			    </div>
+			</div>
 		</div>
 	</body>
 </html>

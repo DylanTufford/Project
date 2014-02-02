@@ -20,6 +20,7 @@ function getBarInfo(name){
 	/*$(#barNameTitle h1).append({
 		text:name
 	});*/
+	$("#barNameTitle").text(name);
 	$.getJSON("bars.json", function(json){
 		var index;
 		for (var i = 0; i < json.bars.length; i++) {

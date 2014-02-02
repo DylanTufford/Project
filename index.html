@@ -9,15 +9,15 @@
 	</head>
 	<body>
 		<div data-role="page" id="barList">
-			<div data-role="header">
+			<div data-role="header" data-position="fixed">
 				<h1>tappster hfx</h1>
 			</div>
 			<div data-role="content">
-			   <ul data-role="listview" class="barList">
+			   <ul data-role="listview" class="barList" data-filter="true" data-filter-placeholder="Search">
 			      
 			   </ul>
 			</div>
-			<div data-role="footer">
+			<div data-role="footer" data-position="fixed">
 				<div data-role="navbar">
 			      <ul>
 			        <li><a href="#">Map</a></li>
@@ -28,16 +28,16 @@
 			</div>
 		</div>
 		<div data-role="page" id="barInfo">
-			<div data-role="header">
+			<div data-role="header" data-position="fixed">
 				<a href="index.html" data-role="button" data-icon="arrow-l">Back</a>
 				<h1 id="barNameTitle"></h1>
 			</div>
 			<div data-role="content">
-			   <ul data-role="listview" class="specialsList">
+			   <ul data-role="listview" class="specialsList" data-filter="true" data-filter-placeholder="Search">
 			      
 			   </ul>
 			</div>
-			<div data-role="footer">
+			<div data-role="footer" data-position="fixed">
 				<div data-role="navbar">
 			      <ul>
 			        <li><a href="#">Map</a></li>

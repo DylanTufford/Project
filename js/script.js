@@ -11,10 +11,32 @@ $(document).ready(function () {
 				)
 			); 
 		} 
-		$('ul').listview('refresh');  
+		$('ul.barList').listview('refresh');  
 	});
 });
 
 function getBarInfo(name){
-	alert(name);
+	$.getJSON("bars.json", function(json){
+		var index;
+		for (var i = 0; i < json.bars.length; i++) {
+			alert(json.bars[i].barName);
+			if(name === json.bars[i].barName){
+				index = i;
+				break;
+			}
+		} 
+		for(var i = 0; i < json.bars[index].specials.length; i++){
+			//alert(json.bars[index].address);
+			var beverage = json.bars[index].specials[i].beverage;
+			alert(beverage);
+			$('ul.specialsList').append(
+			    $('<li>').append(
+			        $('<a>').attr({
+			        	href:'#'
+			        }).append(beverage)
+				)
+			);
+		}
+		$('ul.specialsList').listview('refresh');  
+	});
 }

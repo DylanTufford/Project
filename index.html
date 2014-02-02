@@ -8,12 +8,32 @@
  		<script type="text/javascript" src="js/script.js"></script>
 	</head>
 	<body>
-		<div data-role="page">
+		<div data-role="page" id="barList">
 			<div data-role="header">
 				<h1>tappster hfx</h1>
 			</div>
 			<div data-role="content">
 			   <ul data-role="listview" class="barList">
+			      
+			   </ul>
+			</div>
+			<div data-role="footer">
+				<div data-role="navbar">
+			      <ul>
+			        <li><a href="#">Map</a></li>
+			        <li><a href="index.html">List</a></li>
+			        <li><a href="#">Settings</a></li>
+			      </ul>
+			    </div>
+			</div>
+		</div>
+		<div data-role="page" id="barInfo">
+			<div data-role="header">
+				<a href="index.html" data-role="button" data-icon="arrow-l">Back</a>
+				<h1 id="barNameTitle"></h1>
+			</div>
+			<div data-role="content">
+			   <ul data-role="listview" class="specialsList">
 			      
 			   </ul>
 			</div>

@@ -5,7 +5,7 @@ $(document).ready(function () {
 			$('ul.barList').append(
 			    $('<li>').append(
 			        $('<a>').attr({
-			        	href:'barInfo.html',
+			        	href:'#barInfo',
 			        	onClick: 'getBarInfo("' + barName + '")'
 			        }).append(barName)
 				)
@@ -16,25 +16,31 @@ $(document).ready(function () {
 });
 
 function getBarInfo(name){
+	$('ul.specialsList').empty();
+	/*$(#barNameTitle h1).append({
+		text:name
+	});*/
 	$.getJSON("bars.json", function(json){
 		var index;
 		for (var i = 0; i < json.bars.length; i++) {
-			alert(json.bars[i].barName);
 			if(name === json.bars[i].barName){
 				index = i;
 				break;
 			}
-		} 
+		}
+		var specials = json.bars[index].specials;
+		var day = null;
 		for(var i = 0; i < json.bars[index].specials.length; i++){
-			//alert(json.bars[index].address);
-			var beverage = json.bars[index].specials[i].beverage;
-			alert(beverage);
+			if(day !== specials[i].weekday){
+				day = json.bars[index].specials[i].weekday;
+				$('ul.specialsList').append(
+				    $('<li data-role="list-divider">').append(day)
+				);
+			}
+			var beverage = specials[i].beverage;
+			var price = specials[i].price;
 			$('ul.specialsList').append(
-			    $('<li>').append(
-			        $('<a>').attr({
-			        	href:'#'
-			        }).append(beverage)
-				)
+			    $('<li>').append(beverage)
 			);
 		}
 		$('ul.specialsList').listview('refresh');  

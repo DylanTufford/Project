@@ -8,6 +8,11 @@
  		<script type="text/javascript" src="js/script.js"></script>
 	</head>
 	<body>
+		
+		<!--
+		Bar List Page
+		-->
+
 		<div data-role="page" id="barList">
 			<div data-role="header" data-position="fixed">
 				<h1>tappster hfx</h1>
@@ -21,16 +26,27 @@
 				<div data-role="navbar">
 			      <ul>
 			        <li><a href="#">Map</a></li>
-			        <li><a href="index.html">List</a></li>
+			        <li><a href="index.html" class="ui-btn-active ui-state-persist">List</a></li>
 			        <li><a href="#">Settings</a></li>
 			      </ul>
 			    </div>
 			</div>
 		</div>
-		<div data-role="page" id="barInfo">
+
+		<!--
+		Bar Specials Page
+		-->
+
+		<div data-role="page" id="barSpecials">
 			<div data-role="header" data-position="fixed">
 				<a href="index.html" data-role="button" data-icon="arrow-l">Back</a>
 				<h1 id="barNameTitle"></h1>
+				<div data-role="navbar">
+				    <ul>
+				      <li><a href="#barInfo">Information</a></li>
+				      <li><a href="#barSpecials" class="ui-btn-active ui-state-persist">Specials</a></li>
+				    </ul>
+				 </div>
 			</div>
 			<div data-role="content">
 			   <ul data-role="listview" class="specialsList" data-filter="true" data-filter-placeholder="Search">
@@ -41,7 +57,47 @@
 				<div data-role="navbar">
 			      <ul>
 			        <li><a href="#">Map</a></li>
-			        <li><a href="index.html">List</a></li>
+			        <li><a href="index.html" class="ui-btn-active ui-state-persist">List</a></li>
+			        <li><a href="#">Settings</a></li>
+			      </ul>
+			    </div>
+			</div>
+		</div>
+
+		<!--
+		Bar Information Page
+		-->
+
+		<div data-role="page" id="barInfo">
+			<div data-role="header" data-position="fixed">
+				<a href="index.html" data-role="button" data-icon="arrow-l">Back</a>
+				<h1 id="barNameTitle"></h1>
+				<div data-role="navbar">
+				    <ul>
+				      <li><a href="#barInfo" class="ui-btn-active ui-state-persist">Information</a></li>
+				      <li><a href="#barSpecials">Specials</a></li>
+				    </ul>
+				 </div>
+			</div>
+			<div data-role="content">
+			   <h4>Address:</h4>
+			   <p id="#address"></p>
+			   <h4>Phone Number:</h4>
+			   <p id="#phone"></p>
+			   <h4>Hours:</h4>
+			   <p id="#mon"></p>
+			   <p id="#tues"></p>
+			   <p id="#wed"></p>
+			   <p id="#thu"></p>
+			   <p id="#fri"></p>
+			   <p id="#sat"></p>
+			   <p id="#sun"></p>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+			      <ul>
+			        <li><a href="#">Map</a></li>
+			        <li><a href="index.html" class="ui-btn-active ui-state-persist">List</a></li>
 			        <li><a href="#">Settings</a></li>
 			      </ul>
 			    </div>

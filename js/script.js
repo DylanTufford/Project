@@ -30,15 +30,15 @@ function getBarInfo(name){
 		var bar = json.bars[index];
 
 		//Get Info (address, hours, etc.)
-		$('#address p').text(bar.address);
-		$('#phone p').text(bar.phone);
-		$('#mon p').text("Monday: " + bar.hours.m);
-		$('#tues p').text("Tuesday: " + bar.hours.tu);
-		$('#wed p').text("Wednesday: " + bar.hours.w);
-		$('#thu p').text("Thursday: " + bar.hours.th);
-		$('#fri p').text("Friday: " + bar.hours.f);
-		$('#sat p').text("Saturday: " + bar.hours.sa);
-		$('#sun p').text("Sunday: " + bar.hours.su);
+		$('#address').text(bar.address);
+		$('#phone').text(bar.phone);
+		$('#mon').text("Monday: " + bar.hours.m);
+		$('#tues').text("Tuesday: " + bar.hours.tu);
+		$('#wed').text("Wednesday: " + bar.hours.w);
+		$('#thu').text("Thursday: " + bar.hours.th);
+		$('#fri').text("Friday: " + bar.hours.f);
+		$('#sat').text("Saturday: " + bar.hours.sa);
+		$('#sun').text("Sunday: " + bar.hours.su);
 
 		//Get Specials
 		var specials = bar.specials;

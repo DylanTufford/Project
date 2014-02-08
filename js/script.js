@@ -20,6 +20,15 @@ $(document).ready(function () {
 function getBarInfo(name){
 	//Clear lists
 	$('ul.specialsList').empty();
+	$('#address').text("");
+	$('#phone').text("");
+	$('#mon').text("");
+	$('#tues').text("");
+	$('#wed').text("");
+	$('#thu').text("");
+	$('#fri').text("");
+	$('#sat').text("");
+	$('#sun').text("");
 
 	//Add bar name to the top of the bar specials & bar info pages
 	$('#barSpecials h1').text(name);
@@ -43,13 +52,27 @@ function getBarInfo(name){
 		//Get Info (address, hours, etc.) & add it to the bar information page
 		$('#address').text(bar.address);
 		$('#phone').text(bar.phone);
-		$('#mon').text("Monday: " + bar.hours.m);
-		$('#tues').text("Tuesday: " + bar.hours.tu);
-		$('#wed').text("Wednesday: " + bar.hours.w);
-		$('#thu').text("Thursday: " + bar.hours.th);
-		$('#fri').text("Friday: " + bar.hours.f);
-		$('#sat').text("Saturday: " + bar.hours.sa);
-		$('#sun').text("Sunday: " + bar.hours.su);
+		if(bar.hours.m != null){
+			$('#mon').text("Monday: " + bar.hours.m);
+		}
+		if(bar.hours.tu != null){
+			$('#tues').text("Tuesday: " + bar.hours.tu);
+		}
+		if(bar.hours.w != null){
+			$('#wed').text("Wednesday: " + bar.hours.w);
+		}
+		if(bar.hours.th != null){
+			$('#thu').text("Thursday: " + bar.hours.th);
+		}
+		if(bar.hours.f != null){
+			$('#fri').text("Friday: " + bar.hours.f);
+		}
+		if(bar.hours.f != null){
+			$('#sat').text("Saturday: " + bar.hours.sa);
+		}
+		if(bar.hours.f != null){
+			$('#sun').text("Sunday: " + bar.hours.su);
+		}
 
 		//Store the indexed jSON object's specials as a variable for easier access
 		var specials = bar.specials;

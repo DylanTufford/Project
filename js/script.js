@@ -16,14 +16,29 @@ $(document).ready(function () {
 		$('ul.barList').listview('refresh');//Update bar list
 	});
 
-	$('#faveButton').click(function() {
+	$('#faveButtonInfo').click(function() {
 		name = $('#barInfo h1').text();
-		if($('#faveButton').text() == "Favourite"){
+		if($('#faveButtonInfo').text() == "Favourite"){
 			$.cookie(name, true);
-			$('#faveButton').text("Unfavourite");
+			$('#faveButtonInfo').text("Unfavourite");
+			$('#faveButtonSpecials').text("Unfavourite");
 		}else{
 			$.cookie(name, false);
-			$('#faveButton').text("Favourite");
+			$('#faveButtonInfo').text("Favourite");
+			$('#faveButtonSpecials').text("Favourite");
+		}
+	});
+
+	$('#faveButtonSpecials').click(function() {
+		name = $('#barInfo h1').text();
+		if($('#faveButtonSpecials').text() == "Favourite"){
+			$.cookie(name, true);
+			$('#faveButtonInfo').text("Unfavourite");
+			$('#faveButtonSpecials').text("Unfavourite");
+		}else{
+			$.cookie(name, false);
+			$('#faveButtonInfo').text("Favourite");
+			$('#faveButtonSpecials').text("Favourite");
 		}
 	});
 });
@@ -47,11 +62,12 @@ function getBarInfo(name){
 
 	//Checks if bar is a favourite or not & titles the favourite button accordingly
 	checkCookie = $.cookie(name);
-	alert(checkCookie);
-	if(checkCookie == true){
-		$('#faveButton').text("Unfavourite");
+	if(checkCookie == "true"){
+		$('#faveButtonSpecials').text("Unfavourite");
+		$('#faveButtonInfo').text("Unfavourite");
 	}else{
-		$('#faveButton').text("Favourite");
+		$('#faveButtonSpecials').text("Favourite");
+		$('#faveButtonInfo').text("Favourite");
 	}
 
 	$.getJSON("bars.json", function(json){//Get jSON document

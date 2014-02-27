@@ -15,6 +15,17 @@ $(document).ready(function () {
 		} 
 		$('ul.barList').listview('refresh');//Update bar list
 	});
+
+	$('#faveButton').click(function() {
+		name = $('#barInfo h1').text();
+		if($('#faveButton').text() == "Favourite"){
+			$.cookie(name, true);
+			$('#faveButton').text("Unfavourite");
+		}else{
+			$.cookie(name, false);
+			$('#faveButton').text("Favourite");
+		}
+	});
 });
 
 function getBarInfo(name){
@@ -33,6 +44,15 @@ function getBarInfo(name){
 	//Add bar name to the top of the bar specials & bar info pages
 	$('#barSpecials h1').text(name);
 	$('#barInfo h1').text(name);
+
+	//Checks if bar is a favourite or not & titles the favourite button accordingly
+	checkCookie = $.cookie(name);
+	alert(checkCookie);
+	if(checkCookie == true){
+		$('#faveButton').text("Unfavourite");
+	}else{
+		$('#faveButton').text("Favourite");
+	}
 
 	$.getJSON("bars.json", function(json){//Get jSON document
 		var index;

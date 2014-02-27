@@ -1,0 +1,93 @@
+{
+	"bars":[
+		{
+			"name":"Maxwell's Plum",
+			"address":"1600 Grafton St",
+			"phone":"(902) 423-5090",
+			"hours":{
+				"m":"11:00am - 1:00am",
+				"tu":"11:00am - 1:00am",
+				"w":"11:00am - 1:00am",
+				"th":"11:00am - 1:00am",
+				"f":"11:00am - 1:00am",
+				"sa":"11:00am - 1:00am",
+				"su":"11:00am - 1:00am"
+			},
+			"specials":[
+				{"category":"Beer", "weekday":"Sunday", "beverage":"Creemore Springs", "price":24.95, "volume":80, "time":"All Day"},
+				{"category":"Beer", "weekday":"Sunday", "beverage":"Guiness", "price":4.75, "volume":12, "time":"All Day"},
+				{"category":"Cocktail", "weekday":"Sunday", "beverage":"Caesars", "price":4.85, "volume":1, "time":"All Day"},
+				{"category":"Beer", "weekday":"Sunday", "beverage":"All PEI Brewing", "price":11.75, "volume":32, "time":"All Day"},
+				{"category":"Beer", "weekday":"Sunday", "beverage":"All PEI Brewing", "price":16.95, "volume":48, "time":"All Day"},
+				{"category":"Beer", "weekday":"Sunday", "beverage":"All PEI Brewing", "price":19.95, "volume":60, "time":"All Day"},
+				{"category":"Beer", "weekday":"Monday", "beverage":"Rickard's Red", "price":24.95, "volume":80, "time":"All Day"}
+			]
+		},
+		{
+			"name":"The Split Crow",
+			"address":"1855 Granville St",
+			"phone":"(902) 422-4366",
+			"hours":{
+				"m":"11:00am - 12:30am",
+				"tu":"11:00am - 12:30am",
+				"w":"11:00am - 12:30am",
+				"th":"11:00am - 1:00am",
+				"f":"11:00am - 1:00am",
+				"sa":"11:00am - 1:00am",
+				"su":"11:00am - 12:30am"
+			},
+			"specials":[
+				{"category":"Beer", "weekday":"Monday", "beverage":"Shippey's Draught", "price":4.50, "volume":14, "time":"7:00pm - 12:30am"},
+				{"category":"Beer", "weekday":"Tuesday", "beverage":"Sleeman's Draught", "price":5.75, "volume":18, "time":"4:30pm - 12:30am"},
+				{"category":"Beer", "weekday":"Wednesday", "beverage":"Coors Light", "price":2.50, "volume":12, "time":"9:00pm - 10:00pm"},
+				{"category":"Beer", "weekday":"Wednesday", "beverage":"Molson Canadian", "price":2.50, "volume":12, "time":"9:00pm - 10:00pm"},
+				{"category":"Beer", "weekday":"Thursday", "beverage":"Coors Light", "price":2.50, "volume":12, "time":"9:00pm - 10:00pm"},
+				{"category":"Beer", "weekday":"Thursday", "beverage":"Molson Canadian", "price":2.50, "volume":12, "time":"9:00pm - 10:00pm"},
+				{"category":"Beer", "weekday":"Friday", "beverage":"Local Craft Beer Draught", "price":4.50, "volume":14, "time":"11:00am - 1:00am"},
+				{"category":"Beer", "weekday":"Saturday", "beverage":"Coors Light", "price":2.50, "volume":12, "time":"4:30pm - 5:30pm"},
+				{"category":"Beer", "weekday":"Saturday", "beverage":"Molson Canadian", "price":2.50, "volume":12, "time":"4:30pm - 5:30pm"},
+				{"category":"Beer", "weekday":"Sunday", "beverage":"Rickard's Draught", "price":5.75, "volume":18, "time":"4:30pm - 12:30am"}
+			]
+		},
+		{
+			"name":"Halifax Alehouse",
+			"address":"1717 Brunswick St",
+			"phone":"(902) 423-6113",
+			"hours":{
+				"m":"10:00am - 3:30am",
+				"tu":"10:00am - 3:30am",
+				"w":"10:00am - 3:30am",
+				"th":"10:00am - 3:30am",
+				"f":"10:00am - 3:30am",
+				"sa":"10:00am - 3:30am",
+				"su":"10:00am - 3:30am"
+			},
+			"specials":[
+				{"category":"Beer", "weekday":"Friday", "beverage":"Guiness", "price":5.25, "volume":16, "time":"4:00pm - 2:00am"}
+			]
+		},
+		{
+			"name":"The Fickle Frog",
+			"address":"5675 Spring Garden Rd",
+			"phone":"(902) 429-9999",
+			"hours":{
+				"m":"10:00am - 2:00am",
+				"tu":"10:00am - 2:00am",
+				"w":"10:00am - 2:00am",
+				"th":"10:00am - 2:00am",
+				"f":"10:00am - 2:00am",
+				"sa":"10:00am - 2:00am",
+				"su":"10:00am - 2:00am"
+			},
+			"specials":[
+				{"category":"Beer", "weekday":"Monday", "beverage":"Steins", "price":10.00, "volume":36, "time":"4:00pm - 2:00am"},
+				{"category":"Tequila", "weekday":"Tuesday", "beverage":"Tequila", "price":4.00, "volume":1, "time":"4:00pm - 2:00am"},
+				{"category":"Shots", "weekday":"Tuesday", "beverage":"Well Shots", "price":4.00, "volume":1, "time":"4:00pm - 2:00am"},
+				{"category":"Beer", "weekday":"Thursday", "beverage":"Pints", "price":3.75, "volume":20, "time":"4:00pm - 2:00am"},
+				{"category":"Beer", "weekday":"Friday", "beverage":"Steiners", "price":7.50, "volume":36, "time":"All Day"},
+				{"category":"Martini", "weekday":"Saturday", "beverage":"Double Martinis", "price":6.00, "volume":2, "time":"4:00pm - 2:00am"},
+				{"category":"Beer", "weekday":"Sunday", "beverage":"Steiners", "price":6.50, "volume":36, "time":"All Day"}
+			]
+		}
+	]
+}

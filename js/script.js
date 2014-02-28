@@ -44,7 +44,9 @@ $(document).ready(function () {
 });
 
 function getBarInfo(name){
-	//Clear lists
+	//Clear lists & titles
+	$('#barSpecials h1').text("");
+	$('#barInfo h1').text("");
 	$('ul.specialsList').empty();
 	$('#address').text("");
 	$('#phone').text("");
@@ -56,11 +58,16 @@ function getBarInfo(name){
 	$('#sat').text("");
 	$('#sun').text("");
 
+	//Update page titles
+	//Code from http://stackoverflow.com/questions/6887442/preventing-jquery-mobile-from-setting-document-title
+	$('div[id="barSpecials"]').bind('pageshow',function(){document.title = name + " - Specials"});
+	$('div[id="barInfo"]').bind('pageshow',function(){document.title = name + " - Information"});
+	
 	//Add bar name to the top of the bar specials & bar info pages
 	$('#barSpecials h1').text(name);
 	$('#barInfo h1').text(name);
 
-	//Checks if bar is a favourite or not & titles the favourite button accordingly
+	//Checks if bar is a favourite or not & titles the favourite buttons accordingly
 	checkCookie = $.cookie(name);
 	if(checkCookie == "true"){
 		$('#faveButtonSpecials').text("Unfavourite");

@@ -16,6 +16,28 @@ $(document).ready(function () {
 		$('ul.barList').listview('refresh');//Update bar list
 	});
 
+	$.getJSON("drinks.json", function(json){//Get jSON document
+		//Go through all of the drinks in the document
+		for (var i = 0; i < json.drinks.length; i++) {
+			var drinkType = json.drinks[i].drinkType;
+			$('ul.drinkList').append(
+			    $('<li>').att("data-role","list-divider").append(drinkType)
+			); 
+			for (var j = 0; j < json.drinks.drinkType; i++) {
+				var drinkBrand = json.drinks[i].drinkBrand[j];
+				$('ul.drinkList').append(
+				    $('<li>').append(
+				        $('<a>').attr({
+				        	href:'#drinkSpecials',
+				        	onClick: 'getDrinkInfo("' + drinkBrand + '")'
+				        }).append(drinkBrand)
+					)
+				); 
+			};
+		} 
+		$('ul.barList').listview('refresh');//Update bar list
+	});
+
 	$('#faveButtonInfo').click(function() {
 		name = $('#barInfo h1').text();
 		if($('#faveButtonInfo').text() == "Favourite"){
@@ -35,6 +57,8 @@ $(document).ready(function () {
 			$.cookie(name, true);
 			$('#faveButtonInfo').text("Unfavourite");
 			$('#faveButtonSpecials').text("Unfavourite");
+			//$('#faveButtonInfo').attr("data-theme", "e");
+			//$('#faveButtonInfo').attr("data-theme", "e");
 		}else{
 			$.cookie(name, false);
 			$('#faveButtonInfo').text("Favourite");

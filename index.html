@@ -21,8 +21,8 @@
 				<h1>Bars</h1>
 				<div data-role="navbar">
 				    <ul>
-				      <li><a href="#" class="ui-btn-active ui-state-persist">A-Z</a></li>
-				      <li><a href="#">Favourites</a></li>
+				      <li><a href="#" id="azBars" class="ui-btn-active ui-state-persist">A-Z</a></li>
+				      <li><a href="#" id="favouriteBars">Favourites</a></li>
 				    </ul>
 				 </div>
 			</div>
@@ -51,7 +51,10 @@
 			<div data-role="header" data-position="fixed">
 				<a href="index.html" data-role="button" data-icon="arrow-l">Back</a>
 				<h1 id="barNameTitle"></h1>
-				<a href="#" id="faveButtonSpecials" data-role="button" data-icon="star">Favourite</a>
+				<div data-type="horizontal" style="position:absolute;float:right;display:inline;" align="right" class="ui-btn-right"> 
+					<a href="#" id="checkInSpecials" data-role="button" data-icon="location">Check In</a>
+					<a href="#" id="faveButtonSpecials" data-role="button" data-icon="star">Favourite</a>
+				</div>
 				<div data-role="navbar">
 				    <ul>
 				      <li><a href="#barInfo">Information</a></li>
@@ -84,7 +87,10 @@
 			<div data-role="header" data-position="fixed">
 				<a href="index.html" data-role="button" data-icon="arrow-l">Back</a>
 				<h1 id="barNameTitle"></h1>
-				<a href="#" id="faveButtonInfo" data-role="button" data-icon="star">Favourite</a>
+				<div data-type="horizontal" style="position:absolute;float:right;display:inline;" align="right" class="ui-btn-right"> 
+					<a href="#" id="checkInInfo" data-role="button" data-icon="location">Check In</a>
+					<a href="#" id="faveButtonInfo" data-role="button" data-icon="star">Favourite</a>
+				</div>
 				<div data-role="navbar">
 				    <ul>
 				      <li><a href="#barInfo" class="ui-btn-active ui-state-persist">Information</a></li>

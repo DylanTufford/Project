@@ -65,6 +65,56 @@ $(document).ready(function () {
 			$('#faveButtonSpecials').text("Favourite");
 		}
 	});
+
+	$('#azBars').click(function(){
+		$('ul.barList').empty();
+		$.getJSON("bars.json", function(json){//Get jSON document
+			//Go through all of the bars in the document, get the name of the bar, 
+			//& append the name to the list of bars
+			for (var i = 0; i < json.bars.length; i++) {
+				var barName = json.bars[i].barName;
+				$('ul.barList').append(
+				    $('<li>').append(
+				        $('<a>').attr({
+				        	href:'#barSpecials',
+				        	onClick: 'getBarInfo("' + barName + '")'
+				        }).append(barName)
+					)
+				); 
+			} 
+			$('ul.barList').listview('refresh');//Update bar list
+		});
+	});
+
+	$('#favouriteBars').click(function(){
+		$('ul.barList').empty();
+		$.getJSON("bars.json", function(json){//Get jSON document
+			//Go through all of the bars in the document, get the name of the bar, 
+			//& append the name to the list of bars
+			for (var i = 0; i < json.bars.length; i++) {
+				var barName = json.bars[i].barName;
+				if($.cookie(barName) == "true"){
+					$('ul.barList').append(
+					    $('<li>').append(
+					        $('<a>').attr({
+					        	href:'#barSpecials',
+					        	onClick: 'getBarInfo("' + barName + '")'
+					        }).append(barName)
+						)
+					);
+				} 
+			} 
+			$('ul.barList').listview('refresh');//Update bar list
+		});
+	});
+
+	$('#checkInInfo').click(function(){
+		alert("You have been checked in to " + $('#barInfo h1').text() + "!");
+	});
+
+	$('#checkInSpecials').click(function(){
+		alert("You have been checked in to " + $('#barSpecials h1').text() + "!");
+	});
 });
 
 function getBarInfo(name){

@@ -117,6 +117,11 @@ $(document).ready(function () {
 	});
 });
 
+/**
+* @method getBarInfo
+* @param {String} name Name of bar that page needs to be loaded for
+*/
+
 function getBarInfo(name){
 	//Clear lists & titles
 	$('#barSpecials h1').text("");

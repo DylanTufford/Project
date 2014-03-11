@@ -1,119 +1,457 @@
-old    new	...	...		@@ -1,6 +1,23 @@
-	 	{
-	 		"drinks":[
-	 			{
-        				"drinkType":"Beer",
-                        "specials":[
-        				                      	"Creemore Springs":{"price": "$24.95", "volume": "80oz", "day": "Sunday", "specialTime": "11:00am-01:00am","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"}
+{
+	"drinks":[
+		{
+			"drinkType":"Beer",
+			"types":[
+				{
+					"type":"Creemore Springs",
+					"specials":[
+						{
+							"price":"$24.95",
+							"volume": "80oz", 
+							"day": "Sunday", 
+							"specialTime": "11:00am-01:00am",
+							"bar": "Maxwell's Plum"
+						}
+					]
+				},
+				{
+					"type":"Guinness",
+					"specials":[
+						{
+							"price": "$4.75", 
+							"volume": "12oz", 
+							"day": "Sunday", 
+							"specialTime": "11:00am-01:00am",
+							"bar": "Maxwell's Plum"
+						},
+						{
+							"price": "$5.25", 
+							"volume": "16oz", 
+							"day": "Friday", 
+							"specialTime": "04:30pm-08:00pm",
+							"bar": "Halifax Alehouse"
+						},
+					]
+				},
+				{
+					"type":"Rickard",
+					"specials":[
+						{
+							"price": "$24.95", 
+							"volume": "80oz", 
+							"day": "Monday", 
+							"specialTime": "11:00am-01:00am",
+							"bar": "Maxwell's Plum"
+						},
+						{
+							"price": "$3.99", 
+							"volume": "12oz", 
+							"day": "Every Day",
+							"specialTime": "11:00pm-01:00am",
+							"bar": "Maxwell's Plum"
+						},
+						{
+							"price": "$22.99", 
+							"volume": "80oz", 
+							"day": "Every Day",
+							"specialTime": "11:00pm-01:00am",
+							"bar": "Maxwell's Plum"
+						},
+						{
+							"price": "$5.75", 
+							"volume": "18oz", 
+							"day": "Sunday", 
+							"specialTime": "04:30pm-12:30am",
+							"bar": "The Split Crow"
+						}
+					]
+				},
+				{
+					"type":"Hoegaarden",
+					"specials":[
+						{
+							"price": "$4.75", 
+							"volume": "12oz", 
+							"day": "Monday", 
+							"specialTime": "11:00am-01:00am",
+							"bar": "Maxwell's Plum"
+						}
+					]
+				},
+				{
+					"type":"Picaroons",
+					"specials":[
+						{
+							"price": "$11.75", 
+							"volume": "32oz", 
+							"day": "Monday", 
+							"specialTime": "11:00am-01:00am",
+							"bar": "Maxwell's Plum"
+						},
+						{
+							"price": "$16.95", 
+							"volume": "48oz", 
+							"day": "Monday", 
+							"specialTime": "11:00am-01:00am",
+							"bar": "Maxwell's Plum"
+						},
+						{
+							"price": "$19.95", 
+							"volume": "60oz", 
+							"day": "Monday", 
+							"specialTime": "11:00am-01:00am",
+							"bar": "Maxwell's Plum"
+						}
+					]
+				},
+				{
+					"type":"Bud Light",
+					"specials":[
+						{
+							"price": "$24.95", 
+							"volume": "80oz", 
+							"day": "Tuesday", 
+							"specialTime": "11:00am-01:00am",
+							"bar": "Maxwell's Plum"
+						}
+					]
+				},
+				{
+					"type":"Smithwicks",
+					"specials":[
+						{
+							"price": "$4.75", 
+							"volume": "12oz", 
+							"day": "Tuesday", 
+							"specialTime": "11:00am-01:00am", "bar": "Maxwell's Plum"
+						}
+					]
+				},
+				{
+					"type":"Big Spruce",
+					"specials":[
+						{
+							"price": "$11.75", 
+							"volume": "32oz", 
+							"day": "Tuesday", 
+							"specialTime": "11:00am-01:00am",
+							"bar": "Maxwell's Plum"
+						},
+						{
+							"price": "$16.95", 
+							"volume": "48oz", 
+							"day": "Tuesday", 
+							"specialTime": "11:00am-01:00am",
+							"bar": "Maxwell's Plum"
+						},
+						{
+							"price": "$19.95", 
+							"volume": "60oz", 
+							"day": "Tuesday", 
+							"specialTime": "11:00am-01:00am",
+							"bar": "Maxwell's Plum"
+						}
+					]
+				},
+				{
+					"type":"Alexander Keith's",
+					"specials":[
+						{
+							"price": "$24.95", 
+							"volume": "80oz", 
+							"day": "Wednesday", "specialTime": "11:00am-01:00am",
+							"bar": "Maxwell's Plum"
+						}
+					]
+				},
+				{
+					"type":"Shock Top",
+					"specials":[
+						{
+							"price": "$4.75", 
+							"volume": "12oz", 
+							"day": "Wednesday", "specialTime": "11:00am-01:00am",
+							"bar": "Maxwell's Plum"
+						}
+					]
+				},
+				{
+					"type":"Granite",
+					"specials":[
+						{
+							"price": "$11.75", 
+							"volume": "32oz", 
+							"day": "Wednesday", 
+							"specialTime": "11:00am-01:00am",
+							"bar": "Maxwell's Plum"
+						},
+						{
+							"price": "$16.95", 
+							"volume": "48oz", 
+							"day": "Wednesday", 
+							"specialTime": "11:00am-01:00am",
+							"bar": "Maxwell's Plum"
+						},
+						{
+							"price": "$19.95", 
+							"volume": "60oz", 
+							"day": "Wednesday", 
+							"specialTime": "11:00am-01:00am",
+							"bar": "Maxwell's Plum"
+						}
+					]
+				},
+				{
+					"type":"Miller Genuine",
+					"specials":[
+						{
+							"price": "$24.95", 
+							"volume": "80oz", 
+							"day": "Thursday", 
+							"specialTime": "11:00am-01:00am",
+							"bar": "Maxwell's Plum"
+						}
+					]
+				},
+				{
+					"type":"Samuel Adams",
+					"specials":[
+						{
+							"price": "$4.75", 
+							"volume": "12oz", 
+							"day": "Thursday", 
+							"specialTime": "11:00am-01:00am",
+							"bar": "Maxwell's Plum"
+						}
+					]
+				},
+				{
+					"type":"Propeller",
+					"specials":[
+						{
+							"price": "$11.75", 
+							"volume": "32oz", 
+							"day": "Thursday", 
+							"specialTime": "11:00am-01:00am",
+							"bar": "Maxwell's Plum"
+						},
+						{
+							"price": "$16.95", 
+							"volume": "48oz", 
+							"day": "Thursday", 
+							"specialTime": "11:00am-01:00am",
+							"bar": "Maxwell's Plum"
+						},
+						{
+							"price": "$19.95", 
+							"volume": "60oz", 
+							"day": "Thursday", 
+							"specialTime": "11:00am-01:00am",
+							"bar": "Maxwell's Plum"
+						},
+						{
+							"price": "$4.95", 
+							"volume": "12oz", 
+							"day": "Every Day", 
+							"specialTime": "06:00pm-09:30pm",
+							"bar": "Maxwell's Plum"
+						},
+						{
+							"price": "$24.95", 
+							"volume": "80oz", 
+							"day": "Every Day", 
+							"specialTime": "06:00pm-09:30pm",
+							"bar": "Maxwell's Plum"
+						}
+					]
+				}
+			]
+		},
+		{
+			"drinkType":"Cocktail",
+			"types":[
+				{
+					"type":"Caesar",
+					"specials":[
+						{
+							"price": "$4.85", 
+							"volume": "1oz", 
+							"day": "Sunday", 
+							"specialTime": "11:00am-01:00am",
+							"bar": "Maxwell's Plum"
+						}
+					]
+				},
+				{
+					"type":"Double Martinis",
+					"specials":[
+						{
+							"price": "$6.00", 
+							"volume": "2oz", 
+							"day": "Saturday", 
+							"specialTime": "04:00pm-02:00am",
+							"bar": "The Fickle Frog"
+						}
+					]
+				},
+			]
+		},
+		{
+			"drinkType":"Shots",
+			"types":[
+				{
+					"type":"Captain Morgan",
+					"specials":[
+						{
+							"price": "$4.85", 
+							"volume": "1oz", 
+							"day": "Monday", 
+							"specialTime": "11:00am-01:00am",
+							"bar": "Maxwell's Plum"
+						}
+					]
+				},
+				{
+					"type":"Absolut",
+					"specials":[
+						{
+							"price": "$4.85", 
+							"volume": "1oz", 
+							"day": "Tuesday", 
+							"specialTime": "11:00am-01:00am",
+							"bar": "Maxwell's Plum"
+						}
+					]
+				},
+				{
+					"type":"Jack Daniels",
+					"specials":[
+						{
+							"price": "$4.85", 
+							"volume": "1oz", 
+							"day": "Thursday", 
+							"specialTime": "11:00am-01:00am",
+							"bar": "Maxwell's Plum"
+						}
+					]
+				},
+				{
+					"type":"Jose Cuervo",
+					"specials":[
+						{
+							"price": "$4.85", 
+							"volume": "1oz", 
+							"day": "Friday", 
+							"specialTime": "11:00am-01:00am",
+							"bar": "Maxwell's Plum"
+						}
+					]
+				},
+				{
+					"type":"Jose Cuervo",
+					"specials":[
+						{
+							"price": "$4.85", 
+							"volume": "1oz", 
+							"day": "Friday", 
+							"specialTime": "11:00am-01:00am",
+							"bar": "Maxwell's Plum"
+						}
+					]
+				},
+				{
+					"type":"Tequila",
+					"specials":[
+						{
+							"price": "$4.00", 
+							"volume": "1oz", 
+							"day": "Tuesday", 
+							"specialTime": "04:00pm-02:00am",
+							"bar": "The Fickle Frog"
+						}
+					]
+				},
+				{
+					"type":"Crown Royal",
+					"specials":[
+						{
+							"price": "$4.85", 
+							"volume": "1oz", 
+							"day": "Saturday", 
+							"specialTime": "11:00am-01:00am",
+							"bar": "Maxwell's Plum"
+						}
+					]
+				},
+				{
+					"type":"Well Shots",
+					"specials":[
+						{
+							"price": "$4.00", 
+							"volume":"1oz", 
+							"day": "Tuesday", 
+							"specialTime": "04:00pm-02:00am",
+							"bar": "The Fickle Frog"
+						}
+					]
+				}
+			]
+		},
+	]
+}
+/*
+												 
+												"Stella Artois": {"price": "$24.95", "volume": "80oz", "day": "Friday", "specialTime": "11:00am-01:00am","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"}
 						
-                                        "Guinness":[{"price": "$4.75", "volume": "12oz", "day": "Sunday", "specialTime": "11:00am-01:00am","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"},
-                                                    {"price": "$5.25", "volume": "16oz", "day": "Friday", "specialTime": "04:30pm-08:00pm","bar": "Halifax Alehouse", "phone": "(902) 423-6113", "address": "1717 Brunswick St, Halifax, NS B3J 2G1", "barHours": "10:00am-03:30am"}]
-                            
-	    					                        "Rickard's": [{"type": "Red", "price": "$24.95", "volume": "80oz", "day": "Monday", "specialTime": "11:00am-01:00am","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"},
-                                                      {"type": "White", "price": "$3.99", "volume": "12oz", "day": {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"}, "specialTime": "11:00pm-01:00am","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"},
-                                                      {"type": "White", "price": "$22.99", "volume": "80oz", "day": {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"}, "specialTime": "11:00pm-01:00am","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"},
-                                                      {"type": "Draught", "price": "$5.75", "volume": "18oz", "day": "Sunday", "specialTime": "04:30pm-12:30am","bar": "The Split Crow", "phone": "(902) 422-4366", "address": "1855 Granville St, Halifax, NS B3J 3L7", "barHours": "11:00-00:30"}]
+												"Kilkenny": {"price": "$4.75", "volume": "12oz", "day": "Friday", "specialTime": "11:00am-01:00am","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"}
 						
-                                        "Hoegaarden": {"price": "$4.75", "volume": "12oz", "day": "Monday", "specialTime": "11:00am-01:00am","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"}
-                            
-	    				                        	"Picaroons": [{"price": "$11.75", "volume": "32oz", "day": "Monday", "specialTime": "11:00am-01:00am","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"},
-                                                      {"price": "$16.95", "volume": "48oz", "day": "Monday", "specialTime": "11:00am-01:00am","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"},
-                                                      {"price": "$19.95", "volume": "60oz", "day": "Monday", "specialTime": "11:00am-01:00am","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"}]
-                                         
-	    			                        		"Bud Light": {"price": "$24.95", "volume": "80oz", "day": "Tuesday", "specialTime": "11:00am-01:00am","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"}
-    
-	    		                        			"Smithwicks": {"price": "$4.75", "volume": "12oz", "day": "Tuesday", "specialTime": "11:00am-01:00am", "bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"}
-    
-                                        "Big Spruce": [{"price": "$11.75", "volume": "32oz", "day": "Tuesday", "specialTime": "11:00am-01:00am","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"},
-                                                       {"price": "$16.95", "volume": "48oz", "day": "Tuesday", "specialTime": "11:00am-01:00am","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"},
-                                                       {"price": "$19.95", "volume": "60oz", "day": "Tuesday", "specialTime": "11:00am-01:00am","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"}]
-                                         
-                                        "Alexander Keith's": {"type": "IPA", "price": "$24.95", "volume": "80oz", "day": "Wednesday", "specialTime": "11:00am-01:00am","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"}
-                            
-                                        "Shock Top": {"price": "$4.75", "volume": "12oz", "day": "Wednesday", "specialTime": "11:00am-01:00am","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"}
-                            
-                                        "Granite": [{"price": "$11.75", "volume": "32oz", "day": "Wednesday", "specialTime": "11:00am-01:00am","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"},
-                                                    {"price": "$16.95", "volume": "48oz", "day": "Wednesday", "specialTime": "11:00am-01:00am","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"},
-                                                    {"price": "$19.95", "volume": "60oz", "day": "Wednesday", "specialTime": "11:00am-01:00am","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"}]
-                                         
-                                        "Miller Genuine": {"price": "$24.95", "volume": "80oz", "day": "Thursday", "specialTime": "11:00am-01:00am","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"}
-                            
-                                        "Samuel Adams": {"type": "Boston Lager", "price": "$4.75", "volume": "12oz", "day": "Thursday", "specialTime": "11:00am-01:00am","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"}
-                                        "Propeller": [{"price": "$11.75", "volume": "32oz", "day": "Thursday", "specialTime": "11:00am-01:00am","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"},
-                                                      {"price": "$16.95", "volume": "48oz", "day": "Thursday", "specialTime": "11:00am-01:00am","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"},
-                                                      {"price": "$19.95", "volume": "60oz", "day": "Thursday", "specialTime": "11:00am-01:00am","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"},
-                                                      {"type": "IPA", "price": "$3.99", "volume": "12oz", "day": {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"}, "specialTime": "07:00pm-09:00pm","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"},
-                                                      {"type": "IPA", "price": "$22.99", "volume": "80oz", "day": {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"}, "specialTime": "07:00pm-09:00pm","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"}]
-                                         
-                                        "Stella Artois": {"price": "$24.95", "volume": "80oz", "day": "Friday", "specialTime": "11:00am-01:00am","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"}
-                            
-                                        "Kilkenny": {"price": "$4.75", "volume": "12oz", "day": "Friday", "specialTime": "11:00am-01:00am","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"}
-                            
-                                        "Garrison": [{"price": "$11.75", "volume": "32oz", "day": "Friday", "specialTime": "11:00am-01:00am","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"},
-                                                     {"price": "$16.95", "volume": "48oz", "day": "Friday", "specialTime": "11:00am-01:00am","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"},
-                                                     {"price": "$19.95", "volume": "60oz", "day": "Friday", "specialTime": "11:00am-01:00am","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"},
-                                                     {"type": "Tall Ship Amber", "price": "$3.99", "volume": "12oz", "day": {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"}, "specialTime": "05:00pm-07:00pm","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"},
-                                                     {"type": "Tall Ship Amber", "price": "$22.99", "volume": "80oz", "day": {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"}, "specialTime": "05:00pm-07:00pm","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"}]
-                                         
-                                        "Heineken": {"price": "$24.95", "volume": "80oz", "day": "Saturday", "specialTime": "11:00am-01:00am","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"}
-                            
-                                        "Harp": {"price": "$4.75", "volume": "12oz", "day": "Saturday", "specialTime": "11:00am-01:00am","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"}
-                            
-                                        "Pumphouse": [{"price": "$11.75", "volume": "32oz", "day": "Saturday", "specialTime": "11:00am-01:00am","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"},
-                                                      {"price": "$16.95", "volume": "48oz", "day": "Saturday", "specialTime": "11:00am-01:00am","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"},
-                                                      {"price": "$19.95", "volume": "60oz", "day": "Saturday", "specialTime": "11:00am-01:00am","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"},
-                                                      {"type": "Blueberry Ale", "price": "$3.99", "volume": "12oz", "day": {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"}, "specialTime": "01:00pm-03:00pm","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"},
-                                                      {"type": "Blueberry Ale", "price": "$22.99", "volume": "80oz", "day": {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"}, "specialTime": "01:00pm-03:00pm","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"}]
-                                         
-                                        "Coors Light": [{"price": "$24.95", "volume": "80oz", "day": {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"}, "specialTime": "11:00am-01:00am","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"},
-                                                        {"price": "$2.50", "volume": "12oz", "day": "Wednesday", "specialTime": "09:00pm-10:00pm","bar": "The Split Crow", "phone": "(902) 422-4366", "address": "1855 Granville St, Halifax, NS B3J 3L7", "barHours": "11:00-00:30"},
-                                                        {"price": "$2.50", "volume": "12oz", "day": "Thursday", "specialTime": "09:00pm-10:00pm","bar": "The Split Crow", "phone": "(902) 422-4366", "address": "1855 Granville St, Halifax, NS B3J 3L7", "barHours": "11:00-00:30"},
-                                                        {"price": "$2.50", "volume": "12oz", "day": "Saturday", "specialTime": "04:30pm-05:30pm","bar": "The Split Crow", "phone": "(902) 422-4366", "address": "1855 Granville St, Halifax, NS B3J 3L7", "barHours": "11:00-00:30"}]
-                            
-                                        "Murphy's": {"type": "Irish Stout", "price": "$4.75", "volume": "12oz", "day": {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"}, "specialTime": "11:00am-01:00am","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"}
-                            
-                                        "Molson Canadian": [{"price": "$3.99", "volume": "12oz", "day": {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"}, "specialTime": "11:00am-01:00pm","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"},
-                                                            {"price": "$22.99", "volume": "80oz", "day": {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"}, "specialTime": "11:00am-01:00pm","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"},
-                                                            {"price": "$2.50", "volume": "12oz", "day": "Wednesday", "specialTime": "09:00pm-10:00pm","bar": "The Split Crow", "phone": "(902) 422-4366", "address": "1855 Granville St, Halifax, NS B3J 3L7", "barHours": "11:00-00:30"},
-                                                            {"price": "$2.50", "volume": "12oz", "day": "Thursday", "specialTime": "09:00pm-10:00pm","bar": "The Split Crow", "phone": "(902) 422-4366", "address": "1855 Granville St, Halifax, NS B3J 3L7", "barHours": "11:00-00:30"},
-                                                            {"price": "$2.50", "volume": "12oz", "day": "Saturday", "specialTime": "04:30pm-05:30pm","bar": "The Split Crow", "phone": "(902) 422-4366", "address": "1855 Granville St, Halifax, NS B3J 3L7", "barHours": "11:00-00:30"}]
-                            
-                            "Moosehead": [{"price": "$3.99", "volume": "12oz", "day": {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"}, "specialTime": "03:00pm-05:00pm","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"},
-                                         {"price": "$22.99", "volume": "80oz", "day": {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"}, "specialTime": "03:00pm-05:00pm","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"}]
-                                         
-                            "Clancy's": [{"price": "$3.99", "volume": "12oz", "day": {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"}, "specialTime": "09:00pm-11:00pm","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"},
-                                         {"price": "$22.99", "volume": "80oz", "day": {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"}, "specialTime": "09:00pm-11:00pm","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"}]
-                                         
-                            "Shippey's": {"type": "Draught", "price": "$4.50", "volume": "14oz", "day": "Monday", "specialTime": "07:00pm-12:30am","bar": "The Split Crow", "phone": "(902) 422-4366", "address": "1855 Granville St, Halifax, NS B3J 3L7", "barHours": "11:00-00:30"}
-                            
-                            "Sleeman's": {"type": "Draught", "price": "$5.75", "volume": "18oz", "day": "Tuesday", "specialTime": "04:30pm-12:30am","bar": "The Split Crow", "phone": "(902) 422-4366", "address": "1855 Granville St, Halifax, NS B3J 3L7", "barHours": "11:00-00:30"}
-                            
-                            "Local Craft": {"type": "Draught", "price": "$4.50", "volume": "14oz", "day": "Friday", "specialTime": "11:00am-01:00am","bar": "The Split Crow", "phone": "(902) 422-4366", "address": "1855 Granville St, Halifax, NS B3J 3L7", "barHours": "11:00-01:00"}
-                            
-                            "Steins": [{"type": "Draught", "price": "$10.00", "volume": "36oz", "day": "Monday", "specialTime": "04:00pm-02:00am","bar": "The Fickle Frog", "phone": "(902) 429-9999", "address": "5675 Spring Garden Rd, Halifax, NS B3J 1H5", "barHours": "10:00am-02:00am"},
-                                      {"type": "Draught", "price": "$7.50", "volume": "36oz", "day": "Friday", "specialTime": "10:00am-02:00am","bar": "The Fickle Frog", "phone": "(902) 429-9999", "address": "5675 Spring Garden Rd, Halifax, NS B3J 1H5", "barHours": "10:00am-02:00am"},
-                                      {"type": "Draught", "price": "$6.50", "volume": "36oz", "day": "Sunday", "specialTime": "10:00am-02:00am","bar": "The Fickle Frog", "phone": "(902) 429-9999", "address": "5675 Spring Garden Rd, Halifax, NS B3J 1H5", "barHours": "10:00am-02:00am"}]
-                                      
-                            "Pints": {"type": "Draught", "price": "$3.75", "volume": "20oz", "day": "Thursday", "specialTime": "04:00pm-02:00am","bar": "The Fickle Frog", "phone": "(902) 429-9999", "address": "5675 Spring Garden Rd, Halifax, NS B3J 1H5", "barHours": "10:00am-02:00am"}
-                            
-                            ],
-                            
-                            "drinkType":"Cocktail",
-	    				    "specials":[
-                            "Caesar":{"price": "$4.85", "volume": "1oz", "day": "Sunday", "specialTime": "11:00am-01:00am","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"}
-                            "Double Martinis":{"price": "$6.00", "volume": "2oz", "day": "Saturday", "specialTime": "04:00pm-02:00am","bar": "The Fickle Frog", "phone": "(902) 429-9999", "address": "5675 Spring Garden Rd, Halifax, NS B3J 1H5", "barHours": "10:00am-02:00am"}],
-                            
-                            
-                            "drinkType":"Shot"
-                            "specials":[
-                                "Rum":{"brand":"Captain Morgan White", "price": "$4.85", "volume": "1oz", "day": "Monday", "specialTime": "11:00am-01:00am","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"}
-                                "Vodka":{"brand": "Absolut", "price": "$4.85", "volume": "1oz", "day": "Tuesday", "specialTime": "11:00am-01:00am","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"}
-                                "Bourbon": {"brand": "Jack Daniels", "price": "$4.85", "volume": "1oz", "day": "Thursday", "specialTime": "11:00am-01:00am","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"}
-                                "Tequila":[{"brand": "Jose Cuervo", "price": "$4.85", "volume": "1oz", "day": "Friday", "specialTime": "11:00am-01:00am","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"}
-                                {"price": "$4.00", "volume": "1oz", "day": "Tuesday", "specialTime": "04:00pm-02:00am","bar": "The Fickle Frog", "phone": "(902) 429-9999", "address": "5675 Spring Garden Rd, Halifax, NS B3J 1H5", "barHours": "10:00am-02:00am"}]
-                                
-                                "Rye":{"brand": "Crown Royal", "price": "$4.85", "volume": "1oz", "day": "Saturday", "specialTime": "11:00am-01:00am","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"}
-                                
-                                "Well Shots": {"price": "$4.00", "volume":"1oz", "day": "Tuesday", "specialTime": "04:00pm-02:00am","bar": "The Fickle Frog", "phone": "(902) 429-9999", "address": "5675 Spring Garden Rd, Halifax, NS B3J 1H5", "barHours": "10:00am-02:00am"}
-                                ]
-]
+												"Garrison": [{"price": "$11.75", "volume": "32oz", "day": "Friday", "specialTime": "11:00am-01:00am","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"},
+																		 {"price": "$16.95", "volume": "48oz", "day": "Friday", "specialTime": "11:00am-01:00am","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"},
+																		 {"price": "$19.95", "volume": "60oz", "day": "Friday", "specialTime": "11:00am-01:00am","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"},
+																		 {"type": "Tall Ship Amber", "price": "$3.99", "volume": "12oz", "day": {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"}, "specialTime": "05:00pm-07:00pm","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"},
+																		 {"type": "Tall Ship Amber", "price": "$22.99", "volume": "80oz", "day": {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"}, "specialTime": "05:00pm-07:00pm","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"}]
+												 
+												"Heineken": {"price": "$24.95", "volume": "80oz", "day": "Saturday", "specialTime": "11:00am-01:00am","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"}
+						
+												"Harp": {"price": "$4.75", "volume": "12oz", "day": "Saturday", "specialTime": "11:00am-01:00am","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"}
+						
+												"Pumphouse": [{"price": "$11.75", "volume": "32oz", "day": "Saturday", "specialTime": "11:00am-01:00am","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"},
+																			{"price": "$16.95", "volume": "48oz", "day": "Saturday", "specialTime": "11:00am-01:00am","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"},
+																			{"price": "$19.95", "volume": "60oz", "day": "Saturday", "specialTime": "11:00am-01:00am","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"},
+																			{"type": "Blueberry Ale", "price": "$3.99", "volume": "12oz", "day": {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"}, "specialTime": "01:00pm-03:00pm","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"},
+																			{"type": "Blueberry Ale", "price": "$22.99", "volume": "80oz", "day": {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"}, "specialTime": "01:00pm-03:00pm","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"}]
+												 
+												"Coors Light": [{"price": "$24.95", "volume": "80oz", "day": {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"}, "specialTime": "11:00am-01:00am","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"},
+																				{"price": "$2.50", "volume": "12oz", "day": "Wednesday", "specialTime": "09:00pm-10:00pm","bar": "The Split Crow", "phone": "(902) 422-4366", "address": "1855 Granville St, Halifax, NS B3J 3L7", "barHours": "11:00-00:30"},
+																				{"price": "$2.50", "volume": "12oz", "day": "Thursday", "specialTime": "09:00pm-10:00pm","bar": "The Split Crow", "phone": "(902) 422-4366", "address": "1855 Granville St, Halifax, NS B3J 3L7", "barHours": "11:00-00:30"},
+																				{"price": "$2.50", "volume": "12oz", "day": "Saturday", "specialTime": "04:30pm-05:30pm","bar": "The Split Crow", "phone": "(902) 422-4366", "address": "1855 Granville St, Halifax, NS B3J 3L7", "barHours": "11:00-00:30"}]
+						
+												"Murphy's": {"type": "Irish Stout", "price": "$4.75", "volume": "12oz", "day": {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"}, "specialTime": "11:00am-01:00am","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"}
+						
+												"Molson Canadian": [{"price": "$3.99", "volume": "12oz", "day": {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"}, "specialTime": "11:00am-01:00pm","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"},
+																						{"price": "$22.99", "volume": "80oz", "day": {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"}, "specialTime": "11:00am-01:00pm","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"},
+																						{"price": "$2.50", "volume": "12oz", "day": "Wednesday", "specialTime": "09:00pm-10:00pm","bar": "The Split Crow", "phone": "(902) 422-4366", "address": "1855 Granville St, Halifax, NS B3J 3L7", "barHours": "11:00-00:30"},
+																						{"price": "$2.50", "volume": "12oz", "day": "Thursday", "specialTime": "09:00pm-10:00pm","bar": "The Split Crow", "phone": "(902) 422-4366", "address": "1855 Granville St, Halifax, NS B3J 3L7", "barHours": "11:00-00:30"},
+																						{"price": "$2.50", "volume": "12oz", "day": "Saturday", "specialTime": "04:30pm-05:30pm","bar": "The Split Crow", "phone": "(902) 422-4366", "address": "1855 Granville St, Halifax, NS B3J 3L7", "barHours": "11:00-00:30"}]
+												
+												"Moosehead": [{"price": "$3.99", "volume": "12oz", "day": {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"}, "specialTime": "03:00pm-05:00pm","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"},
+																		 {"price": "$22.99", "volume": "80oz", "day": {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"}, "specialTime": "03:00pm-05:00pm","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"}]
+																		 
+												"Clancy's": [{"price": "$3.99", "volume": "12oz", "day": {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"}, "specialTime": "09:00pm-11:00pm","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"},
+																		 {"price": "$22.99", "volume": "80oz", "day": {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"}, "specialTime": "09:00pm-11:00pm","bar": "Maxwell's Plum", "phone": "(902) 423-5090", "address": "1600 Grafton St, Halifax, NS B3J 2C2", "barHours": "11:00am-01:00am"}]
+																		 
+												"Shippey's": {"type": "Draught", "price": "$4.50", "volume": "14oz", "day": "Monday", "specialTime": "07:00pm-12:30am","bar": "The Split Crow", "phone": "(902) 422-4366", "address": "1855 Granville St, Halifax, NS B3J 3L7", "barHours": "11:00-00:30"}
+												
+												"Sleeman's": {"type": "Draught", "price": "$5.75", "volume": "18oz", "day": "Tuesday", "specialTime": "04:30pm-12:30am","bar": "The Split Crow", "phone": "(902) 422-4366", "address": "1855 Granville St, Halifax, NS B3J 3L7", "barHours": "11:00-00:30"}
+												
+												"Local Craft": {"type": "Draught", "price": "$4.50", "volume": "14oz", "day": "Friday", "specialTime": "11:00am-01:00am","bar": "The Split Crow", "phone": "(902) 422-4366", "address": "1855 Granville St, Halifax, NS B3J 3L7", "barHours": "11:00-01:00"}
+												
+												"Steins": [{"type": "Draught", "price": "$10.00", "volume": "36oz", "day": "Monday", "specialTime": "04:00pm-02:00am","bar": "The Fickle Frog", "phone": "(902) 429-9999", "address": "5675 Spring Garden Rd, Halifax, NS B3J 1H5", "barHours": "10:00am-02:00am"},
+																	{"type": "Draught", "price": "$7.50", "volume": "36oz", "day": "Friday", "specialTime": "10:00am-02:00am","bar": "The Fickle Frog", "phone": "(902) 429-9999", "address": "5675 Spring Garden Rd, Halifax, NS B3J 1H5", "barHours": "10:00am-02:00am"},
+																	{"type": "Draught", "price": "$6.50", "volume": "36oz", "day": "Sunday", "specialTime": "10:00am-02:00am","bar": "The Fickle Frog", "phone": "(902) 429-9999", "address": "5675 Spring Garden Rd, Halifax, NS B3J 1H5", "barHours": "10:00am-02:00am"}]
+																	
+												"Pints": {"type": "Draught", "price": "$3.75", "volume": "20oz", "day": "Thursday", "specialTime": "04:00pm-02:00am","bar": "The Fickle Frog", "phone": "(902) 429-9999", "address": "5675 Spring Garden Rd, Halifax, NS B3J 1H5", "barHours": "10:00am-02:00am"}
+												
+												],
+*/

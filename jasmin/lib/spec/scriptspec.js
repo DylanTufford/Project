@@ -1,16 +1,14 @@
-var script;
 
 describe("script", function() {
 
-	/*beforeEach(function() {
-    	loadFixtures("fixtures/MYFixture.html");
-    	$("#jasmine-fixtures").attr("data-role","page").trigger("create");
-  	})*/
+	it("will register a click", function() {
+		var $button = $("#barList li a:contains('The Split Crow')").first();
 
-	it("should call function to display information", function(){
+		var spyEvent = spyOnEvent($button, 'click');
+		$button.click();
+		expect('click').toHaveBeenTriggeredOn($button);
+		expect(spyEvent).toHaveBeenTriggered();
 
-		expect($('ul.barList')).toHaveLength(4)
-
-	})
+  	});
 
 });

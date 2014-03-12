@@ -1,45 +1,6 @@
 $(document).ready(function () {
-	$.getJSON("bars.json", function(json){//Get jSON document
-		alert("parsing bars");
-		//Go through all of the bars in the document, get the name of the bar, 
-		//& append the name to the list of bars
-		for (var i = 0; i < json.bars.length; i++) {
-			var barName = json.bars[i].barName;
-			$('ul.barList').append(
-			    $('<li>').append(
-			        $('<a>').attr({
-			        	href:'#barSpecials',
-			        	onClick: 'getBarInfo("' + barName + '")'
-			        }).append(barName)
-				)
-			); 
-		} 
-		$('ul.barList').listview('refresh');//Update bar list
-	});
-
-	
-	$.getJSON("drinks.json", function(json){//Get jSON document
-		alert("parsing drinks");
-		//Go through all of the drinks in the document
-		for (var i = 0; i < json.drinks.length; i++) {
-			var drinkType = json.drinks[i].drinkType;
-			$('ul.drinkList').append(
-			    $('<li>').att("data-role","list-divider").append(drinkType)
-			); 
-			for (var j = 0; j < json.drinks.drinkType; i++) {
-				var types = json.drinks[i].types[j]._type;
-				$('ul.drinkList').append(
-				    $('<li>')/*.append(
-				        $('<a>').attr({
-				        	href:'#drinkSpecials',
-				        	onClick: 'getDrinkInfo("' + types + '")'
-				        })*/.append(types)
-					/*)*/
-				); 
-			};
-		} 
-		$('ul.drinkList').listview('refresh');//Update bar list
-	});
+	getBarList();
+	getDrinksList();
 
 	$('#faveButtonInfo').click(function() {
 		name = $('#barInfo h1').text();
@@ -119,6 +80,51 @@ $(document).ready(function () {
 		alert("You have been checked in to " + $('#barSpecials h1').text() + "!");
 	});
 });
+
+function getBarList(){
+	$.getJSON("bars.json", function(json){//Get jSON document
+		//Go through all of the bars in the document, get the name of the bar, 
+		//& append the name to the list of bars
+		for (var i = 0; i < json.bars.length; i++) {
+			var barName = json.bars[i].barName;
+			$('ul.barList').append(
+			    $('<li>').append(
+			        $('<a>').attr({
+			        	href:'#barSpecials',
+			        	onClick: 'getBarInfo("' + barName + '")'
+			        }).append(barName)
+				)
+			); 
+		} 
+		$('ul.barList').listview('refresh');//Update bar list
+	});
+}
+
+function getDrinksList(){
+	alert("drinks list");
+	$.getJSON("drinks.json", function(json){//Get jSON document
+		alert("parsing drinks");
+		//Go through all of the drinks in the document
+		for (var i = 0; i < json.drinks.length; i++) {
+			var drinkType = json.drinks[i].drinkType;
+			$('ul.drinkList').append(
+			    $('<li>').att("data-role","list-divider").append(drinkType)
+			); 
+			for (var j = 0; j < json.drinks.drinkType; i++) {
+				var types = json.drinks[i].types[j]._type;
+				$('ul.drinkList').append(
+				    $('<li>')/*.append(
+				        $('<a>').attr({
+				        	href:'#drinkSpecials',
+				        	onClick: 'getDrinkInfo("' + types + '")'
+				        })*/.append(types)
+					/*)*/
+				); 
+			};
+		} 
+		$('ul.drinkList').listview('refresh');//Update bar list
+	});
+}
 
 /**
 * @method getBarInfo

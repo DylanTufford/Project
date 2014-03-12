@@ -1,5 +1,6 @@
 $(document).ready(function () {
 	$.getJSON("bars.json", function(json){//Get jSON document
+		alert("parsing bars");
 		//Go through all of the bars in the document, get the name of the bar, 
 		//& append the name to the list of bars
 		for (var i = 0; i < json.bars.length; i++) {
@@ -16,7 +17,9 @@ $(document).ready(function () {
 		$('ul.barList').listview('refresh');//Update bar list
 	});
 
+	
 	$.getJSON("drinks.json", function(json){//Get jSON document
+		alert("parsing drinks");
 		//Go through all of the drinks in the document
 		for (var i = 0; i < json.drinks.length; i++) {
 			var drinkType = json.drinks[i].drinkType;
@@ -24,18 +27,18 @@ $(document).ready(function () {
 			    $('<li>').att("data-role","list-divider").append(drinkType)
 			); 
 			for (var j = 0; j < json.drinks.drinkType; i++) {
-				var drinkBrand = json.drinks[i].drinkBrand[j];
+				var types = json.drinks[i].types[j]._type;
 				$('ul.drinkList').append(
-				    $('<li>').append(
+				    $('<li>')/*.append(
 				        $('<a>').attr({
 				        	href:'#drinkSpecials',
-				        	onClick: 'getDrinkInfo("' + drinkBrand + '")'
-				        }).append(drinkBrand)
-					)
+				        	onClick: 'getDrinkInfo("' + types + '")'
+				        })*/.append(types)
+					/*)*/
 				); 
 			};
 		} 
-		$('ul.barList').listview('refresh');//Update bar list
+		$('ul.drinkList').listview('refresh');//Update bar list
 	});
 
 	$('#faveButtonInfo').click(function() {

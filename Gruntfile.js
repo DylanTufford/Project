@@ -5,11 +5,11 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     uglify: {
       options: {
-        banner: '/*! Hello*/\n'
+        banner: '/*script uglified*/\n'
       },
       build: {
-        src: 'src/<%= pkg.name %>.js',
-        dest: 'build/<%= pkg.name %>.min.js'
+        src: ['js/script.js', 'js/cookie.js'],
+        dest: 'build/script.min.js'
       }
     }
   });

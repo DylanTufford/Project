@@ -14,7 +14,7 @@
 
   <script type="text/javascript" src="lib/jasmine-jquery/jquery.js"></script>
 
- <script type="text/javascript">
+  <script type="text/javascript">
     $(document).on("mobileinit", function(){
     $.mobile.autoInitializePage = false;
     $.mobile.hashListeningEnabled = false;
@@ -22,9 +22,7 @@
   </script>
 
   <script type="text/javascript" src="../js/jquery.mobile-1.4.0.js"></script>
-
- 
-
+  <script type="text/javascript" src="../js/cookie.js"></script>
   <script type="text/javascript" src="lib/jasmine-jquery/jasmine-jquery.js"></script>
 
   <!-- source -->
@@ -64,6 +62,118 @@
 
 </head>
 
-<body>
-</body>
+  <body>
+    
+    <!--
+    Bar List Page - Main list page that shows a list of all of the bars
+    -->
+
+    <div data-role="page" id="barList" data-title="Bars">
+      <div data-role="header" data-position="fixed">
+        <h1>Bars</h1>
+        <div data-role="navbar">
+            <ul>
+              <li><a href="#" id="azBars" class="ui-btn-active ui-state-persist">A-Z</a></li>
+              <li><a href="#" id="favouriteBars">Favourites</a></li>
+            </ul>
+         </div>
+      </div>
+      <div data-role="content">
+         <ul data-role="listview" class="barList" data-autodividers="true" data-filter="true" data-filter-placeholder="Search">
+            
+         </ul>
+      </div>
+      <div data-role="footer" data-position="fixed">
+        <div data-role="navbar">
+            <ul>
+              <li><a href="#">Map</a></li>
+              <li><a href="index.html" class="ui-btn-active ui-state-persist">Bars</a></li>
+              <li><a href="drinks.html">Drinks</a></li>
+              <li><a href="#">Profile</a></li>
+            </ul>
+          </div>
+      </div>
+    </div>
+
+    <!--
+    Bar Specials Page - Page that shows a list of all of the specials for a selected bar
+    -->
+
+    <div data-role="page" id="barSpecials" data-title="Specials">
+      <div data-role="header" data-position="fixed">
+        <a href="index.html" data-role="button" data-icon="arrow-l">Back</a>
+        <h1 id="barNameTitle"></h1>
+        <div data-type="horizontal" style="position:absolute;float:right;display:inline;" align="right" class="ui-btn-right"> 
+          <a href="#" id="checkInSpecials" data-role="button" data-icon="location">Check In</a>
+          <a href="#" id="faveButtonSpecials" data-role="button" data-icon="star">Favourite</a>
+        </div>
+        <div data-role="navbar">
+            <ul>
+              <li><a href="#barInfo">Information</a></li>
+              <li><a href="#barSpecials" class="ui-btn-active ui-state-persist">Specials</a></li>
+            </ul>
+         </div>
+      </div>
+      <div data-role="content">
+         <ul data-role="listview" class="specialsList" data-filter="true" data-filter-placeholder="Search">
+            
+         </ul>
+      </div>
+      <div data-role="footer" data-position="fixed">
+        <div data-role="navbar">
+            <ul>
+              <li><a href="#">Map</a></li>
+              <li><a href="index.html" class="ui-btn-active ui-state-persist">Bars</a></li>
+              <li><a href="drinks.html">Drinks</a></li>
+              <li><a href="#">Profile</a></li>
+            </ul>
+          </div>
+      </div>
+    </div>
+
+    <!--
+    Bar Information Page - Page that shows all of the contact information for a selected bar
+    -->
+
+    <div data-role="page" id="barInfo" data-title="Information">
+      <div data-role="header" data-position="fixed">
+        <a href="index.html" data-role="button" data-icon="arrow-l">Back</a>
+        <h1 id="barNameTitle"></h1>
+        <div data-type="horizontal" style="position:absolute;float:right;display:inline;" align="right" class="ui-btn-right"> 
+          <a href="#" id="checkInInfo" data-role="button" data-icon="location">Check In</a>
+          <a href="#" id="faveButtonInfo" data-role="button" data-icon="star">Favourite</a>
+        </div>
+        <div data-role="navbar">
+            <ul>
+              <li><a href="#barInfo" class="ui-btn-active ui-state-persist">Information</a></li>
+              <li><a href="#barSpecials">Specials</a></li>
+            </ul>
+         </div>
+      </div>
+      <div data-role="content">
+         <h4>Address:</h4>
+         <p id="address"></p>
+         <h4>Phone Number:</h4>
+         <p id="phone"></p>
+         <h4>Hours:</h4>
+         <p id="mon"></p>
+         <p id="tues"></p>
+         <p id="wed"></p>
+         <p id="thu"></p>
+         <p id="fri"></p>
+         <p id="sat"></p>
+         <p id="sun"></p>
+      </div>
+      <div data-role="footer" data-position="fixed">
+        <div data-role="navbar">
+            <ul>
+              <li><a href="#">Map</a></li>
+              <li><a href="index.html" class="ui-btn-active ui-state-persist">Bars</a></li>
+              <li><a href="drinks.html">Drinks</a></li>
+              <li><a href="#">Profile</a></li>
+            </ul>
+          </div>
+      </div>
+    </div>
+  </body>
 </html>

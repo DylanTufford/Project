@@ -1,16 +1,44 @@
-var script;
 
-describe("script", function() {
+describe("List of bars", function() {
 
-	/*beforeEach(function() {
-    	loadFixtures("fixtures/MYFixture.html");
-    	$("#jasmine-fixtures").attr("data-role","page").trigger("create");
-  	})*/
+	it("Creates Split Crow button", function() {
+		var $button = $("#barList li a:contains('The Split Crow')").first();
 
-	it("should call function to display information", function(){
+		var spyEvent = spyOnEvent($button, 'click');
+		$button.click();
+		expect('click').toHaveBeenTriggeredOn($button);
+		expect(spyEvent).toHaveBeenTriggered();
 
-		expect($('ul.barList')).toHaveLength(4)
+  	});
 
-	})
+	it("Creates Halifax Alehouse button", function() {
+		var $button = $("#barList li a:contains('Halifax Alehouse')").first();
+
+		var spyEvent = spyOnEvent($button, 'click');
+		$button.click();
+		expect('click').toHaveBeenTriggeredOn($button);
+		expect(spyEvent).toHaveBeenTriggered();
+
+  	});
+
+	it("Creates Maxwell's Plum button", function() {
+		var $button = $("#barList li a:contains('Maxwell's Plum')").first();
+
+		var spyEvent = spyOnEvent($button, 'click');
+		$button.click();
+		expect('click').toHaveBeenTriggeredOn($button);
+		expect(spyEvent).toHaveBeenTriggered();
+
+  	});
+
+	it("Creates Toothy Moose button", function() {
+		var $button = $("#barList li a:contains('Toothy Moose')").first();
+
+		var spyEvent = spyOnEvent($button, 'click');
+		$button.click();
+		expect('click').toHaveBeenTriggeredOn($button);
+		expect(spyEvent).toHaveBeenTriggered();
+
+  	});
 
 });

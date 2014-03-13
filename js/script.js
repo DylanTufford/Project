@@ -1,7 +1,23 @@
+/**
+ * Javascript code that adds dynamic functionality to the app
+ *
+ * @class script
+ */
+
+/**
+ * Fired when page is ready
+ *
+ * @event ready
+ */
 $(document).ready(function () {
 	getBarList();
 	getDrinksList();
 
+	/**
+	 * Fired when favourite button on info page is clicked
+	 *
+	 * @event faveButtonInfo
+	 */
 	$('#faveButtonInfo').click(function() {
 		name = $('#barInfo h1').text();
 		if($('#faveButtonInfo').text() == "Favourite"){
@@ -15,6 +31,11 @@ $(document).ready(function () {
 		}
 	});
 
+	/**
+	 * Fired when favourite button on specials page is clicked
+	 *
+	 * @event faveButtonSpecials
+	 */
 	$('#faveButtonSpecials').click(function() {
 		name = $('#barInfo h1').text();
 		if($('#faveButtonSpecials').text() == "Favourite"){
@@ -30,6 +51,11 @@ $(document).ready(function () {
 		}
 	});
 
+	/**
+	 * Fired when a-z bar sorting option is selected
+	 *
+	 * @event sortAZ
+	 */
 	$('#azBars').click(function(){
 		$('ul.barList').empty();
 		$.getJSON("bars.json", function(json){//Get jSON document
@@ -50,6 +76,11 @@ $(document).ready(function () {
 		});
 	});
 
+	/**
+	 * Fired when favourite bars sorting option is selected
+	 *
+	 * @event sortFavourites
+	 */
 	$('#favouriteBars').click(function(){
 		$('ul.barList').empty();
 		$.getJSON("bars.json", function(json){//Get jSON document
@@ -72,15 +103,30 @@ $(document).ready(function () {
 		});
 	});
 
+	/**
+	 * Fired when check-in button is selected on info page
+	 *
+	 * @event checkInInfo
+	 */
 	$('#checkInInfo').click(function(){
 		alert("You have been checked in to " + $('#barInfo h1').text() + "!");
 	});
 
+	/**
+	 * Fired when check-in button is selected on specials page
+	 *
+	 * @event checkInSpecials
+	 */
 	$('#checkInSpecials').click(function(){
 		alert("You have been checked in to " + $('#barSpecials h1').text() + "!");
 	});
 });
 
+/**
+* Gets list of bars from jSON file and displays them in a list
+* 
+* @method getBarList
+*/
 function getBarList(){
 	$.getJSON("bars.json", function(json){//Get jSON document
 		//Go through all of the bars in the document, get the name of the bar, 
@@ -100,8 +146,13 @@ function getBarList(){
 	});
 }
 
+/**
+* Gets list of drinks from jSON file and displays them in a list
+* 
+* @method getDrinksList
+*/
 function getDrinksList(){
-	alert("drinks list");
+	//alert("drinks list");
 	$.getJSON("drinks.json", function(json){//Get jSON document
 		alert("parsing drinks");
 		//Go through all of the drinks in the document
@@ -127,6 +178,8 @@ function getDrinksList(){
 }
 
 /**
+* Gets info about bars and displays them in the bar's page
+* 
 * @method getBarInfo
 * @param {String} name Name of bar that page needs to be loaded for
 */

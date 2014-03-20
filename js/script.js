@@ -9,7 +9,7 @@
  *
  * @event ready
  */
-$(document).ready(function () {
+$(document).on('pageshow', '#barList', function () {
 	getBarList();
 	getDrinksList();
 
@@ -276,11 +276,89 @@ function getBarInfo(name){
 			var beverage = specials[i].beverage;
 			var price = specials[i].price;
 			var volume = specials[i].volume
-			//Append th special's information to the special's list
+			//Append the special's information to the special's list
 			$('ul.specialsList').append(
 			    $('<li>').append("$" + price + " - " + beverage + " (" + volume + "oz)")
 			);
 		}
 		$('ul.specialsList').listview('refresh');//Update specials list
 	});
+}
+
+/**
+* Create's map & plots user's current position
+* 
+* @method map
+*/
+$(function() {
+    $('#map_canvas').gmap({
+    	'streetViewControl': false,
+    	'panControl': false,
+    	'zoomControl': false,
+        'zoom': 10
+    }).bind('init', function(event, map) {
+        $('#map_canvas').gmap('getCurrentPosition', function(position, status) {
+			if ( status === 'OK' ) {
+				var currPosition = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+				$('#map_canvas').gmap('addMarker', {
+					'position': currPosition,
+					'bounds': true,
+					'icon':new google.maps.MarkerImage('images/arrow.png')
+				});
+			}
+		});
+		addBarsToMap();
+    });
+});
+
+function addBarsToMap(){
+	//Halifax Alehouse
+	$('#map_canvas').gmap('addMarker', { 
+		'position': '44.646719, -63.576676', 
+		'bounds': true 
+	}).click(function() {
+        $('#map_canvas').gmap('openInfoWindow', { 
+        	'content': 'Halifax Alehouse' 
+        }, this);
+    }); 
+
+	//Maxwell's Plum
+    $('#map_canvas').gmap('addMarker', { 
+		'position': '44.645808, -63.574923', 
+		'bounds': true 
+	}).click(function() {
+        $('#map_canvas').gmap('openInfoWindow', { 
+        	'content': 'Maxwell\'s Plum' 
+        }, this);
+    }); 
+
+    //The Fickle Frog
+    $('#map_canvas').gmap('addMarker', { 
+		'position': '44.642603, -63.579034', 
+		'bounds': true 
+	}).click(function() {
+        $('#map_canvas').gmap('openInfoWindow', { 
+        	'content': 'The Fickle Frog' 
+        }, this);
+    }); 
+
+    //The Split Crow
+    $('#map_canvas').gmap('addMarker', { 
+		'position': '44.649414, -63.574385', 
+		'bounds': true 
+	}).click(function() {
+        $('#map_canvas').gmap('openInfoWindow', { 
+        	'content': 'The Split Crow' 
+        }, this);
+    }); 
+
+    //Toothy Moose
+    $('#map_canvas').gmap('addMarker', { 
+		'position': '44.646302, -63.574380', 
+		'bounds': true 
+	}).click(function() {
+        $('#map_canvas').gmap('openInfoWindow', { 
+        	'content': 'Toothy Moose' 
+        }, this);
+    }); 
 }

@@ -9,7 +9,7 @@
  *
  * @event ready
  */
-$(document).on('pageshow', '#barList', function () {
+$(document).ready(function () {
 	getBarList();
 	getDrinksList();
 
@@ -303,8 +303,13 @@ $(function() {
 				$('#map_canvas').gmap('addMarker', {
 					'position': currPosition,
 					'bounds': true,
+					'animation': google.maps.Animation.DROP,
 					'icon':new google.maps.MarkerImage('images/arrow.png')
-				});
+				}).click(function() {
+				$('#map_canvas').gmap('openInfoWindow', { 
+					'content': 'You are here!'
+				}, this);
+			});
 			}
 		});
 		addBarsToMap();
@@ -312,53 +317,16 @@ $(function() {
 });
 
 function addBarsToMap(){
-	//Halifax Alehouse
-	$('#map_canvas').gmap('addMarker', { 
-		'position': '44.646719, -63.576676', 
-		'bounds': true 
-	}).click(function() {
-        $('#map_canvas').gmap('openInfoWindow', { 
-        	'content': 'Halifax Alehouse' 
-        }, this);
-    }); 
-
-	//Maxwell's Plum
-    $('#map_canvas').gmap('addMarker', { 
-		'position': '44.645808, -63.574923', 
-		'bounds': true 
-	}).click(function() {
-        $('#map_canvas').gmap('openInfoWindow', { 
-        	'content': 'Maxwell\'s Plum' 
-        }, this);
-    }); 
-
-    //The Fickle Frog
-    $('#map_canvas').gmap('addMarker', { 
-		'position': '44.642603, -63.579034', 
-		'bounds': true 
-	}).click(function() {
-        $('#map_canvas').gmap('openInfoWindow', { 
-        	'content': 'The Fickle Frog' 
-        }, this);
-    }); 
-
-    //The Split Crow
-    $('#map_canvas').gmap('addMarker', { 
-		'position': '44.649414, -63.574385', 
-		'bounds': true 
-	}).click(function() {
-        $('#map_canvas').gmap('openInfoWindow', { 
-        	'content': 'The Split Crow' 
-        }, this);
-    }); 
-
-    //Toothy Moose
-    $('#map_canvas').gmap('addMarker', { 
-		'position': '44.646302, -63.574380', 
-		'bounds': true 
-	}).click(function() {
-        $('#map_canvas').gmap('openInfoWindow', { 
-        	'content': 'Toothy Moose' 
-        }, this);
-    }); 
+	$.getJSON("bars.json", {}, function(json){//Get jSON document
+		$.each(json.bars, function(i, bar) {
+			$('#map_canvas').gmap('addMarker', { 
+				'position': new google.maps.LatLng(bar.latitude, bar.longitude),
+				'bounds': true 
+			}).click(function() {
+				$('#map_canvas').gmap('openInfoWindow', { 
+					'content': bar.barName 
+				}, this);
+			});
+		});
+	});
 }

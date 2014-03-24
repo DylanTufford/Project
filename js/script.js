@@ -9,9 +9,8 @@
  *
  * @event ready
  */
-$(document).ready(function () {
+$(document).on('pageshow', '#barList', function () {
 	getBarList();
-	getDrinksList();
 
 	/**
 	 * Fired when favourite button on info page is clicked
@@ -122,12 +121,18 @@ $(document).ready(function () {
 	});
 });
 
+$(document).on('pageshow', '#drinkList', function () {
+	getDrinksList();
+});
+
+
 /**
 * Gets list of bars from jSON file and displays them in a list
 * 
 * @method getBarList
 */
 function getBarList(){
+	$('ul.barList').empty();
 	$.getJSON("bars.json", function(json){//Get jSON document
 		//Go through all of the bars in the document, get the name of the bar, 
 		//& append the name to the list of bars
@@ -152,26 +157,25 @@ function getBarList(){
 * @method getDrinksList
 */
 function getDrinksList(){
-	//alert("drinks list");
+	$('ul.drinkList').empty();
 	$.getJSON("drinks.json", function(json){//Get jSON document
-		alert("parsing drinks");
 		//Go through all of the drinks in the document
 		for (var i = 0; i < json.drinks.length; i++) {
 			var drinkType = json.drinks[i].drinkType;
 			$('ul.drinkList').append(
-			    $('<li>').att("data-role","list-divider").append(drinkType)
+			    $('<li>').attr("data-role","list-divider").append(drinkType)
 			); 
-			for (var j = 0; j < json.drinks.drinkType; i++) {
+			for (var j = 0; j < json.drinks[i].types.length ; j++) {
 				var types = json.drinks[i].types[j]._type;
 				$('ul.drinkList').append(
-				    $('<li>')/*.append(
+				    $('<li>').append(
 				        $('<a>').attr({
 				        	href:'#drinkSpecials',
 				        	onClick: 'getDrinkInfo("' + types + '")'
-				        })*/.append(types)
-					/*)*/
+				        }).append(types)
+				    )
 				); 
-			};
+			}
 		} 
 		$('ul.drinkList').listview('refresh');//Update bar list
 	});
@@ -290,7 +294,7 @@ function getBarInfo(name){
 * 
 * @method map
 */
-$(function() {
+$(document).on('pageshow', '#map', function() {
     $('#map_canvas').gmap({
     	'streetViewControl': false,
     	'panControl': false,

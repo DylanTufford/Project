@@ -323,8 +323,8 @@ function addBarsToMap(){
 				'position': new google.maps.LatLng(bar.latitude, bar.longitude),
 				'bounds': true 
 			}).click(function() {
-				$('#map_canvas').gmap('openInfoWindow', { 
-					'content': bar.barName 
+				$('#map_canvas').gmap('openInfoWindow', {  
+					'content':'<h2>'+ bar.barName + '</h2><p>Bar info</p>'
 				}, this);
 			});
 		});

@@ -328,7 +328,13 @@ function addBarsToMap(){
 				'bounds': true 
 			}).click(function() {
 				$('#map_canvas').gmap('openInfoWindow', {  
-					'content':'<h2>'+ bar.barName + '</h2><p>Bar info</p>'
+					'content':'<h3><a href="index.html">'+ bar.barName + '</a></h3><p>' + bar.address + '</p><p>' + "Monday: " + bar.hours.m +
+																				  '<br>' + "Tuesday: " + bar.hours.tu +
+																				  '<br>' + "Wednesday: " + bar.hours.w +
+																				  '<br>' + "Thursday: " + bar.hours.th +
+																				  '<br>' + "Friday: " + bar.hours.f +
+																				  '<br>' + "Saturday: " + bar.hours.sa + 
+																				  '<br>' + "Sunday: " + bar.hours.su + '</p>'
 				}, this);
 			});
 		});

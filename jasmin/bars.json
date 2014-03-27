@@ -3,6 +3,8 @@
 		{
 			"barName":"Halifax Alehouse",
 			"address":"1717 Brunswick St",
+			"latitude":"44.646719",
+			"longitude":"-63.576676",
 			"phone":"(902) 423-6113",
 			"hours":{
 				"m":"10:00am - 3:30am",
@@ -20,6 +22,8 @@
 		{
 			"barName":"Maxwell's Plum",
 			"address":"1600 Grafton St",
+			"latitude":"44.645808",
+			"longitude":"-63.574923",
 			"phone":"(902) 423-5090",
 			"hours":{
 				"m":"11:00am - 1:00am",
@@ -43,6 +47,8 @@
 		{
 			"barName":"The Fickle Frog",
 			"address":"5675 Spring Garden Rd",
+			"latitude":"44.642603",
+			"longitude":"-63.579034",
 			"phone":"(902) 429-9999",
 			"hours":{
 				"m":"10:00am - 2:00am",
@@ -66,6 +72,8 @@
 		{
 			"barName":"The Split Crow",
 			"address":"1855 Granville St",
+			"latitude":"44.649414",
+			"longitude":"-63.574385",
 			"phone":"(902) 422-4366",
 			"hours":{
 				"m":"11:00am - 12:30am",
@@ -92,8 +100,13 @@
 		{
 			"barName":"Toothy Moose",
 			"address":"1661 Argyle Street",
+			"latitude":"44.646302",
+			"longitude":"-63.574380",
 			"phone":"(902) 407-3170",
 			"hours":{
+				"m":"Closed",
+				"tu":"Closed",
+				"w":"Closed",
 				"th":"11:00pm - 4:00am",
 				"f":"10:00m - 4:00am",
 				"sa":"10:00pm - 4:00am",

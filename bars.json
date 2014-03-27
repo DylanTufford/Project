@@ -104,6 +104,9 @@
 			"longitude":"-63.574380",
 			"phone":"(902) 407-3170",
 			"hours":{
+				"m":"Closed",
+				"tu":"Closed",
+				"w":"Closed",
 				"th":"11:00pm - 4:00am",
 				"f":"10:00m - 4:00am",
 				"sa":"10:00pm - 4:00am",

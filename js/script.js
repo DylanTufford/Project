@@ -9,7 +9,7 @@
  *
  * @event ready
  */
-$(document).on('pageshow', '#barList', function () {
+$(document).ready(function () {
 	getBarList();
 
 	/**

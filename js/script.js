@@ -375,7 +375,6 @@ function getDrinkInfo(name){
 			);
 		}
 		$('ul.specialsList').listview('refresh');//Update specials list
-	});
 }
 
 /**

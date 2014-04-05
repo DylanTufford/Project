@@ -11,7 +11,7 @@
 		<script type="text/javascript" src="http://jquery-ui-map.googlecode.com/svn/trunk/ui/jquery.ui.map.extensions.js"></script>
 
 
- 		<script type="text/javascript" src="buils/script.min.js"></script>
+ 		<script type="text/javascript" src="js/script.js"></script>
 
  		<meta name="viewport" content="initial-scale=1, maximum-scale=1"></meta>
 	</head>
@@ -49,7 +49,7 @@
 		</div>
 
 		<!--
-		Drink Specials Page - Page that shows a list of all of the specials for a selected drink
+		Drink Information Page - Page that shows the information about a specific drink
 		-->
 
 		<div data-role="page" id="drinkSpecials" data-title="Specials">
@@ -59,9 +59,16 @@
 				<a href="#" id="faveButtonSpecials" data-role="button" data-icon="star">Favourite</a>
 			</div>
 			<div data-role="content">
-			   <ul data-role="listview" class="specialsList" data-filter="true" data-filter-placeholder="Search">
-			      
-			   </ul>
+			   <h4>Price:</h4>
+			   <p id="price"></p>
+			   <h4>Volume:</h4>
+			   <p id="volume"></p>
+			   <h4>Day:</h4>
+			   <p id="day"></p>
+			   <h4>Special Time:</h4>
+			   <p id="specialTime"></p>
+			   <h4>Bar:</h4>
+			   <p id="bar"></p>
 			</div>
 			<div data-role="footer" data-position="fixed">
 				<div data-role="navbar">
@@ -69,49 +76,6 @@
 			        <li><a href="map.html">Map</a></li>
 			        <li><a href="index.html">Bars</a></li>
 			        <li><a href="drinks.html" class="ui-btn-active ui-state-persist">Drinks</a></li>
-			        <li><a href="#">Profile</a></li>
-			      </ul>
-			    </div>
-			</div>
-		</div>
-
-		<!--
-		Bar Information Page - Page that shows all of the contact information for a selected bar
-		-->
-
-		<div data-role="page" id="drinkInfo" data-title="Information">
-			<div data-role="header" data-position="fixed">
-				<a href="drinks.html" data-role="button" data-icon="arrow-l">Back</a>
-				<h1 id="drinkNameTitle"></h1>
-				<div data-type="horizontal" style="position:absolute;float:right;display:inline;" align="right" class="ui-btn-right"> 
-					<a href="#" id="checkInInfo" data-role="button" data-icon="location">Check In</a>
-					<a href="#" id="faveButtonInfo" data-role="button" data-icon="star">Favourite</a>
-				</div>
-				<div data-role="navbar">
-				    <ul>
-				      <li><a href="#drinkInfo" class="ui-btn-active ui-state-persist">Information</a></li>
-				      <li><a href="#drinkSpecials">Specials</a></li>
-				    </ul>
-				 </div>
-			</div>
-			<div data-role="content">
-			   <h4>Price:</h4>
-			   <p id="price"></p>
-			   <h4>Volume:</h4>
-			   <p id="volume"></p>
-			   <h4>Day:</h4>
-			   <p id="Day"></p>
-			   <h4>Special Time:</h4>
-			   <p id="specialTime"></p>
-			   <h4>Bar:</h4>
-			   <p id="barName"></p>
-			</div>
-			<div data-role="footer" data-position="fixed">
-				<div data-role="navbar">
-			      <ul>
-			        <li><a href="map.html">Map</a></li>
-			        <li><a href="index.html" class="ui-btn-active ui-state-persist">Bars</a></li>
-			        <li><a href="drinks.html">Drinks</a></li>
 			        <li><a href="#">Profile</a></li>
 			      </ul>
 			    </div>

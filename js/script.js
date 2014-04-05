@@ -122,7 +122,7 @@ $(document).ready(function () {
 });
 
 $(document).on('pageshow', '#drinkList', function () {
-	getDrinksList();
+	getDrinkList();
 });
 
 /**
@@ -153,9 +153,9 @@ function getBarList(){
 /**
 * Gets list of drinks from jSON file and displays them in a list
 * 
-* @method getDrinksList
+* @method getDrinkList
 */
-function getDrinksList(){
+function getDrinkList(){
 	$('ul.drinkList').empty();
 	$.getJSON("drinks.json", function(json){//Get jSON document
 		//Go through all of the drinks in the document
@@ -291,31 +291,24 @@ function getBarInfo(name){
 /**
 * Gets info about drinks and displays them in the drinks's page
 * 
-* @method getBarInfo
+* @method getDrinkInfo
 * @param {String} name Name of drink that page needs to be loaded for
 */
 
 function getDrinkInfo(name){
 	//Clear lists & titles
 	$('#drinkSpecials h1').text("");
-	$('#drinkInfo h1').text("");
 	$('ul.specialsList').empty();
 	$('#price').text("");
 	$('#volume').text("");
 	$('#day').text("");
 	$('#specialTime').text("");
 	$('#barName').text("");
-
-	//Update page titles
-	//Code from http://stackoverflow.com/questions/6887442/preventing-jquery-mobile-from-setting-document-title
-	$('div[id="drinkSpecials"]').bind('pageshow',function(){document.title = name + " - Specials"});
-	$('div[id="drinkInfo"]').bind('pageshow',function(){document.title = name + " - Information"});
 	
-	//Add bar name to the top of the bar specials & bar info pages
+	//Add drink name to the top of the drink info pages
 	$('#drinkSpecials h1').text(name);
-	$('#drinkInfo h1').text(name);
 
-	//Checks if bar is a favourite or not & titles the favourite buttons accordingly
+	//Checks if drink is a favourite or not & titles the favourite buttons accordingly
 	checkCookie = $.cookie(name);
 	if(checkCookie == "true"){
 		$('#faveButtonSpecials').text("Unfavourite");
@@ -331,50 +324,25 @@ function getDrinkInfo(name){
 		//the drink name that was passed into the function
 		for (var i = 0; i < json.drinks.length; i++) {
 			//If it finds a match, record the index & break out of the for loop
-			if(name === json.drinks[i].drinkName){
+			if(name === json.drinks[i].types._type){
 				index = i;
 				break;
 			}
 		}
 
 		//Store the indexed jSON object as a variable for easier access
-		var drink = json.drinks[index];
+		var drink = json.drinks[index].types.specials;
 
-		//Get Info (price, volume, etc.) & add it to the bar information page
-		$('#price').text(drinks.price);
-		$('#volume').text(drinks.volume);
-		$('#day').text(drinks.day);
-		$('#specialTime').text(drinks.specialTime);
-		$('#bar').text(drinks.bar);
+		//Get Info (price, volume, etc.) & add it to the drink information page
+		$('#price').text(drink.price);
+		$('#volume').text(drink.volume);
+		$('#day').text(drink.day);
+		$('#specialTime').text(drink.specialTime);
+		$('#bar').text(drink.bar);
 		 
-		$('ul.drinkList').listview('refresh');//Update bar list
+		$('ul.drinkList').listview('refresh');//Update drink` list
 	});
 
-
-		//Store the indexed jSON object's specials as a variable for easier access
-		var specials = drink.specials;
-		//Keep track of the day each special falls on
-		var day = null;
-		//Go through the list of specials
-		for(var i = 0; i < json.drinks[index].specials.length; i++){
-			//If the special is on a new day that the previous special, add
-			//a new list divider for the new day
-			if(day !== specials[i].weekday){
-				day = json.drinks[index].specials[i].weekday;
-				$('ul.specialsList').append(
-				    $('<li data-role="list-divider">').append(day)
-				);
-			}
-			//Get the type of drink, price, and volume of the special
-			var beverage = specials[i].beverage;
-			var price = specials[i].price;
-			var volume = specials[i].volume
-			//Append the special's information to the special's list
-			$('ul.specialsList').append(
-			    $('<li>').append("$" + price + " - " + beverage + " (" + volume + "oz)")
-			);
-		}
-		$('ul.specialsList').listview('refresh');//Update specials list
 }
 
 /**

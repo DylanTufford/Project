@@ -76,6 +76,38 @@ $(document).ready(function () {
 	});
 
 	/**
+	 * Fired when distance option is selected
+	 * 
+	 * @event distance
+	 */
+	$('#distance').click(function(){
+		$('ul.barList').empty();
+		$.getJSON("bars.json", function(json){//Get jSON document
+			for (var i = 0; i < json.bars.length; i++) {
+				var latitude = 0;
+				var longitude = 0;
+				//navigator.geolocation.getCurrentPosition(success, error);
+				function success(position){
+				    latitude  = position.coords.latitude;    
+				    longitude = position.coords.longitude;    
+				}
+				var distance = getDistanceFromLatLonInKm(latitude, longitude, json.bars[i].latitude, json.bars[i].longitude);
+				var bName = json.bars[i].barName;
+				var barName = bName + "       " + distance + " km";
+				$('ul.barList').append(
+				    $('<li>').append(
+				        $('<a>').attr({
+				        	href:'#barSpecials',
+				        	onClick: 'getBarInfo("' + bName + '")'
+				        }).append(barName)
+					)
+				); 
+			}
+			$('ul.barList').listview('refresh');//Update bar list
+		});
+	});
+
+	/**
 	 * Fired when favourite bars sorting option is selected
 	 *
 	 * @event sortFavourites
@@ -389,4 +421,22 @@ function addBarsToMap(){
 			});
 		});
 	});
+}
+
+function getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2) {
+  var R = 6371; // Radius of the earth in km
+  var dLat = deg2rad(lat2-lat1);  // deg2rad below
+  var dLon = deg2rad(lon2-lon1); 
+  var a = 
+    Math.sin(dLat/2) * Math.sin(dLat/2) +
+    Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) * 
+    Math.sin(dLon/2) * Math.sin(dLon/2)
+    ; 
+  var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
+  var d = R * c; // Distance in km
+  return d;
+}
+
+function deg2rad(deg) {
+  return deg * (Math.PI/180)
 }

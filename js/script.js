@@ -170,7 +170,7 @@ function getDrinkList(){
 				    $('<li>').append(
 				        $('<a>').attr({
 				        	href:'#drinkSpecials',
-				        	onClick: 'getDrinkInfo("' + types + '")'
+				        	onClick: 'getDrinkInfo("' + types + '",' + j + ')'
 				        }).append(types)
 				    )
 				); 
@@ -295,7 +295,7 @@ function getBarInfo(name){
 * @param {String} name Name of drink that page needs to be loaded for
 */
 
-function getDrinkInfo(name){
+function getDrinkInfo(name,typeNumber){
 	//Clear lists & titles
 	$('#drinkSpecials h1').text("");
 	$('ul.specialsList').empty();
@@ -308,18 +308,8 @@ function getDrinkInfo(name){
 	//Add drink name to the top of the drink info pages
 	$('#drinkSpecials h1').text(name);
 
-	//Checks if drink is a favourite or not & titles the favourite buttons accordingly
-	checkCookie = $.cookie(name);
-	if(checkCookie == "true"){
-		$('#faveButtonSpecials').text("Unfavourite");
-		$('#faveButtonInfo').text("Unfavourite");
-	}else{
-		$('#faveButtonSpecials').text("Favourite");
-		$('#faveButtonInfo').text("Favourite");
-	}
-
 	$.getJSON("drinks.json", function(json){//Get jSON document
-		var index;
+		var index = 0;
 		//Go through jSON document until it finds the drink that matches
 		//the drink name that was passed into the function
 		for (var i = 0; i < json.drinks.length; i++) {
@@ -331,14 +321,18 @@ function getDrinkInfo(name){
 		}
 
 		//Store the indexed jSON object as a variable for easier access
-		var drink = json.drinks[index].types.specials;
+		var drink = json.drinks[index].types[typeNumber].specials;
 
-		//Get Info (price, volume, etc.) & add it to the drink information page
-		$('#price').text(drink.price);
-		$('#volume').text(drink.volume);
-		$('#day').text(drink.day);
-		$('#specialTime').text(drink.specialTime);
-		$('#bar').text(drink.bar);
+		for(var i = 0; i < drink.length; i++)
+		{
+			//Get Info (price, volume, etc.) & add it to the drink information page
+			$('ul.specialsList').empty();
+			$('#price').text(drink[i].price);
+			$('#volume').text(drink[i].volume);
+			$('#day').text(drink[i].day);
+			$('#specialTime').text(drink[i].specialTime);
+			$('#bar').text(drink[i].bar);
+		}
 		 
 		$('ul.drinkList').listview('refresh');//Update drink` list
 	});
